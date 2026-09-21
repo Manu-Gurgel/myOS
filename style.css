@@ -46,7 +46,7 @@ body{
 .window-title{
  font-size:15px;
  height:25px;
- width:75px;
+ width:80px;
  color: rgb(66, 176, 188);
  text-align: center;
 }
@@ -54,7 +54,7 @@ body{
 .window.body{
 color:rgb(83, 191, 206);
 height:auto;
-width:75px;
+width:80px;
 font-size:15px;
 padding:8px 10px;
 }
