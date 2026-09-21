@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>LakeOS</title>
+      <link rel="slylesheet" href="style.css">
+  </head>
+
+  <body> 
+
+      <div class="topbar"> 
+        <p>LakeOS</p>
+        
+        <div class="clock" id="clock">
+          00:00
+        </div>
+      </div>
+
+      <div class="icone-geral" onclick="openWindow()">
+        <div class="icone-img">
+          <img src="pictures/weather.png">
+        </div>
+
+        <div class="icone-text">
+          Weather
+        </div>
+
+      </div>
+
+      <div class="icone-geral" onclick="openWindow('window.nts')">
+
+        <div class="icone-img"><img src="pictures/notes.png"></div>
+        <div class = "icone-text">Notes</div>
+
+        <div id="window.nts">
+           <div class="window-title">Notes</div>
+           <div class="window.body">
+           <input type="text" id="textImput" placeholder="write your notes">
+           </div>
+        </div>
+      </div>
+
+
+      <script scr="script.js"></script>
+      
+    
+  </body>
+
+
+</html>
