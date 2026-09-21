@@ -19,22 +19,19 @@
 
       <div class="icone-geral" onclick="openWindow()">
         <div class="icone-img">
-          <img src="pictures/weather.png">
-        </div>
-
-        <div class="icone-text">
-          Weather
-        </div>
-
+          <img src="pictures/weather.png"></div>
+          <div class="icone-text">Weather</div>
       </div>
 
-      <div class="icone-geral" onclick="openWindow('window.nts')">
+
+      <div class="icone-geral" onclick="openWindow('window.nts')"> 
 
         <div class="icone-img"><img src="pictures/notes.png"></div>
         <div class = "icone-text">Notes</div>
 
         <div id="window.nts">
            <div class="window-title">Notes</div>
+           <button class="close-button" onclick="cloWindow('window.nts')"> X </button>
            <div class="window.body">
            <input type="text" id="textImput" placeholder="write your notes">
            </div>

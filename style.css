@@ -61,6 +61,12 @@ padding:8px 10px;
 
 #window.nts{
     display:none;
+    position: relative;
 }
 
+.close-button{
+    position: absolute;
+    top:5ox;
+    right:5px;
+}
 
