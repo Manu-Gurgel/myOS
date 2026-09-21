@@ -9,10 +9,10 @@ function updateclock(){
 setInterval(updateclock, 1000);
 updateclock();
 
-function openWindow(){
+function openWindow(windowId){
    document.getElementById("window").style.display = "block";
 }
 
-function closeWindow(){
+function closeWindow(windowId){
    document.getElementById("window").style.display="none";
 }
