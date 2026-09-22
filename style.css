@@ -25,6 +25,7 @@ body{
     flex-direction: column;
     justify-content:flex-start;
     gap: 12px;
+
 }
 
 
@@ -32,7 +33,7 @@ body{
  border-radius: 20px;
  max-height:64px;
  max-width: 64px;
- object-fit:cover;
+ object-fit:contain;
  -webkit-user-drag:none;
  pointer-events: none;
  user-select: none;
