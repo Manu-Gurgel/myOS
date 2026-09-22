@@ -16,7 +16,7 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.6);
-    text-align: center;
+    align-items: center;
     color: rgb(250, 250, 250);
 }
 
@@ -87,7 +87,7 @@ right:5px;
     cursor: move;
     user-select: none;
     left:10px;
-    top:75px;
+    top:60px;
 }
 
 .window-geral{
