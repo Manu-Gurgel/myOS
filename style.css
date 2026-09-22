@@ -20,6 +20,11 @@ body{
     color: rgb(250, 250, 250);
 }
 
+.clock{
+    color:white;
+    font-size: 15px;
+}
+
 .icone-geral{
     display: flex;
     flex-direction: column;
@@ -28,6 +33,11 @@ body{
 
 }
 
+.icone-img img{
+    height:100%;
+    width: 100%;
+    object-fit:contain;
+}
 
 .icone-img{
  border-radius: 20px;
@@ -39,6 +49,8 @@ body{
  flex-shrink: 0; 
  display: block;
 }
+
+
 
 .icone-text{
  font-size: 30px;
