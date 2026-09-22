@@ -33,7 +33,6 @@ body{
  border-radius: 20px;
  height:64px;
  width: 64px;
- object-fit:contain;
  -webkit-user-drag:none;
  pointer-events: none;
  user-select: none;
