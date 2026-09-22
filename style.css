@@ -5,10 +5,10 @@ body{
     overflow: hidden;
     margin: 0;
     height: 100vh;
-    width:100vw;
+    width:100%;
     font-family: sans-serif;
     background-repeat:no-repeat;
-
+    box-sizing: border-box
 }
 
 .topbar{
@@ -21,6 +21,7 @@ body{
     align-items: center;
     color: rgb(250, 250, 250);
     padding: 5px;
+    box-sizing: border-box;
 }
 
 #clock{
@@ -63,6 +64,7 @@ width: 70px !important;
  background-color: rgb(66, 176, 188);
  text-align: center;
  color: rgb(250, 250, 250);
+ z-index:10;
 }
 
 .window-body{
@@ -73,6 +75,7 @@ font-size:15px;
 padding:8px 10px;
 color:rgb(250, 250, 250);
 position:absolute;
+z-index:10;
 }
 
 #window-nts{
@@ -90,12 +93,14 @@ right:5px;
     user-select: none;
     left:10px;
     top:60px;
+    z-index:0;
 }
 
 .window-geral{
 position: relative;
 height: auto;
 width: 300px;
+z-index:10;
 }
 
 #notes{
