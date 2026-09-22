@@ -31,8 +31,8 @@ body{
 
 .icone-img{
  border-radius: 20px;
- max-height:64px;
- max-width: 64px;
+ height:64px;
+ width: 64px;
  object-fit:contain;
  -webkit-user-drag:none;
  pointer-events: none;
@@ -58,7 +58,7 @@ body{
  color: rgb(250, 250, 250);
 }
 
-.window.body{
+.window-body{
 background-color:rgb(83, 191, 206);
 height:auto;
 width:80px;
@@ -68,7 +68,7 @@ display:none;
 color:rgb(250, 250, 250);
 }
 
-#window.nts{
+#window-nts{
     display:none;
     position: relative;
 }
