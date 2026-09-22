@@ -73,13 +73,11 @@ color:rgb(250, 250, 250);
 
 #window-nts{
     display:none;
-    position: relative;
 }
-
 .close-button{
-    position: absolute;
-    top:5px;
-    right:5px;
+position: absolute;
+top:5px;
+right:5px;
 }
 
 #weather{
@@ -90,3 +88,8 @@ color:rgb(250, 250, 250);
     top:40px;
 }
 
+.window-geral{
+position: relative;
+height: auto;
+width: 300px;
+}
