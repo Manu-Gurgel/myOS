@@ -60,13 +60,17 @@ function Windowmovel(windowElement){
     document.addEventListenet('mouseup', (e) => pararmovimento);
 
     windowElement.addEventListener('touchstart', (e) => {
-      const touch = e.touches[0]; // considera só o primeiro dedo que toca
+      const touch = e.touches.item(0); // considera só o primeiro dedo que toca
+      if(touch){
       começarmovimento(e, touch.clientX, touch.clientY);
-    }, {passive: false}); 
+      }
+    }, {passive: false});
 
     document.addEventListener('touchmove', (e) =>{
-      const touch = e.touches[0];
+      const touch = e.touches.item(0);
+      if(touch){
       movendo(touch.clientX, touch.clientY);
+      }
     }, {passive: false});
 
     document.addEventListener('touchend', pararmoviemnto);
