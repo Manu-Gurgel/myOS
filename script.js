@@ -25,7 +25,7 @@ function Windowmovel(windowElement){
 
 
     
-      windoeElement.addEventListener(pointerdown, (e) =>{
+      windoeElement.addEventListener('pointerdown', (e) =>{
 
       if(!e.target.classList.contains('drag-zone')) return;
 
