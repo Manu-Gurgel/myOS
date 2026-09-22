@@ -4,6 +4,7 @@ function updateclock(){
    const minute = String(now.getMinutes()).padStart(2,"0");
    
    document.getElementById("clock").textContent = `${hour}, ${minute}`;
+   
 }
 
 setInterval(updateclock, 1000);
