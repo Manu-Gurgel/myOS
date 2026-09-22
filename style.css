@@ -10,9 +10,9 @@ body{
 }
 
 .topbar{
-    height:35px;
+    height:45px;
     width:100%;
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.6);
@@ -22,7 +22,9 @@ body{
 
 #clock{
     color:white;
-    font-size: 15px;
+    font-size: 25px;
+    height: auto;
+    width:40px;
 }
 
 .icone-geral{
@@ -38,8 +40,8 @@ body{
  user-select: none;
  flex-shrink: 0; 
  display: block;
- height: 64px !important;
-width: 64px !important;
+ height: 70px !important;
+width: 70px !important;
 }
 
 
@@ -85,7 +87,7 @@ right:5px;
     cursor: move;
     user-select: none;
     left:10px;
-    top:40px;
+    top:100px;
 }
 
 .window-geral{
@@ -98,7 +100,7 @@ width: 300px;
     position: absolute;
     cursor:move;
     user-select: none;
-    top:100px;
+    top:250px;
     left:10px;
 }
 
