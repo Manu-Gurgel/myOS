@@ -87,7 +87,7 @@ right:5px;
     cursor: move;
     user-select: none;
     left:10px;
-    top:100px;
+    top:75px;
 }
 
 .window-geral{
@@ -100,7 +100,7 @@ width: 300px;
     position: absolute;
     cursor:move;
     user-select: none;
-    top:250px;
+    top:125px;
     left:10px;
 }
 
