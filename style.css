@@ -33,12 +33,6 @@ body{
 
 }
 
-.icone-img img{
-    height:100%;
-    width: 100%;
-    object-fit:contain;
-}
-
 .icone-img{
  border-radius: 20px;
  height:64px !important;
@@ -53,7 +47,7 @@ body{
 
 
 .icone-text{
- font-size: 30px;
+ font-size: 10px;
  font-weight: bold;
  color: rgb(250, 250, 250);
 }
