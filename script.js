@@ -25,18 +25,21 @@ function Windowmovel(windowElement){
 
 
     
-   function começarmovimento(e, clientX, clientY) {
+      windoeElement.addEventListener(pointerdown, (e) =>{
+
       if(!e.target.classList.contains('drag-zone')) return;
 
       estamovendo=true;
+
       offsetX=e.clientX-windowElement.offsetLeft;
       offsetY=e.clientY-windowElement.offsetTop;
+
       windowElement.style.zIndex = "1000";
 
-      if(e.cancetable) e.preventDefault();
-    };
+      windowElement.setPointerCapture(e.pointerId);
+    });
 
-    function movendo(clientX, clientY){
+    windowElement.addEventListener('pointermove', (e) =>{
        if(!estamovendo) return;
 
        let newX = e.clientX - offsetX;
@@ -47,33 +50,14 @@ function Windowmovel(windowElement){
 
        windowElement.style.left = newX + 'px';
        windowElement.style.top = newY + 'px';
-    };
+    });
 
-    function pararmovimento() {
+    windowElement.addEventListener('pointerup', (e) => {
+      if(!estamovendo) return;
       estamovendo=false;
-    };
 
-
-    // ouvintes para evento do mouse //
-    windowElement.addEventListener('mousedown', (e) => começarmovimento(e, e.clientX, e.clientY));
-    document.addEventListener('mousemove', (e)=> movendo(e.clientX, e.clientY));
-    document.addEventListenet('mouseup', (e) => pararmovimento);
-
-    windowElement.addEventListener('touchstart', (e) => {
-      const touch = e.touches.item(0); // considera só o primeiro dedo que toca
-      if(touch){
-      começarmovimento(e, touch.clientX, touch.clientY);
-      }
-    }, {passive: false});
-
-    document.addEventListener('touchmove', (e) =>{
-      const touch = e.touches.item(0);
-      if(touch){
-      movendo(touch.clientX, touch.clientY);
-      }
-    }, {passive: false});
-
-    document.addEventListener('touchend', pararmoviemnto);
+      windowElement.realeasePointerCapture(e.pointerId);
+    });
 }
 
 const windowselect = document.getElementById(windowId);
