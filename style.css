@@ -93,3 +93,12 @@ position: relative;
 height: auto;
 width: 300px;
 }
+
+#notes{
+    position: absolute;
+    cursor:move;
+    user-select: none;
+    top:100px;
+    left:10px;
+}
+

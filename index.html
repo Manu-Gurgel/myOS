@@ -21,15 +21,15 @@
       </div>
 
 
-      <div class="icone-geral" onclick="openWindow('window-nts')"> 
+      <div class="icone-geral" onclick="openWindow('window-nts')" id="notes"> 
 
-        <div class="icone-img"><img src="pictures/notes.png" 64px 64px></div>
+        <div class="icone-img"><img src="pictures/notes.png" height="64" width="64"></div>
         <div class = "icone-text">Notes</div>
 
         <div class="window-geral" id="window-nts">
            <div class="window-title">Notes</div>
-           <button class="close-button" onclick="closeWindow('window.nts')"> X </button>
-           <div class="window.body">
+           <button class="close-button" onclick="closeWindow('window-nts')"> X </button>
+           <div class="window-body">
            <input type="text" id="textImput" placeholder="write your notes">
            </div>
         </div>
