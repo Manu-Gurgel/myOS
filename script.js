@@ -18,6 +18,8 @@ function closeWindow(windowId){
    document.getElementById(windowId).style.display="none";
 }
 
+let maiorzIndex = "1000";
+
 function Windowmovel(windowElement){
 
     let offsetX = 0;
@@ -39,7 +41,7 @@ function Windowmovel(windowElement){
       windowElement.style.left = newX + 'px';
       windowElement.style.top = newY + 'px';
 
-      if(e.cancelable) e.prefentDefault();
+      if(e.cancelable) e.preventDefault();
     }
 
     function iniciar(e){
@@ -49,8 +51,8 @@ function Windowmovel(windowElement){
       const point = getPoint(e);
       offsetX = point.clientX - windowElement.offsetLeft;
       offsetY = point.clientY - windowElement.offsetTop;
-
-      windowElement.style.zIndex="1000";
+      maiorzIndex++;
+      windowElement.style.zIndex=maiorzIndex;
 
       window.addEventListener('mousemove', movimento);
       window.addEventListener('touchmove', movimento)
