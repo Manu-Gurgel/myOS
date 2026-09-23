@@ -15,7 +15,7 @@
       </div>
 
 
-      <div class="icone-geral" onclick="openWindow()" id="weather">
+      <div class="icone-geral" onclick="openWindow('window-wth')" id="weather">
         <div class="icone-img"><img src="pictures/weather.png" height="70" width="70"></div>
         <div class="icone-text">Weather</div>
       </div>
@@ -27,12 +27,20 @@
       </div>
 
 
-        <div class="window-geral drag-zone" id="window-nts">
-           <div class="window-title drag-zone">Notes</div>
+        <div class="window-geral" id="window-nts">
+           <div class="window-title">Notes</div>
            <button class="close-button" onclick="closeWindow('window-nts')"> X </button>
-           <div class="window-body drag-zone">
+           <div class="window-body">
            <input type="text" id="textInput" placeholder="write your notes">
            </div>
+        </div>
+
+        <div class = "window-geral" id = "window-wth">
+          <div class = "window-title"> Weather Search</div>
+          <button class="close-button" onclick="closeWindow('window-wth')"> X </button>
+          <div class="window-body">
+            <input type="text" id="textweather" placeholder="search a city weather">
+          </div>
         </div>
 
 

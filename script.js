@@ -19,46 +19,50 @@ function closeWindow(windowId){
 }
 
 function Windowmovel(windowElement){
-    let estamovendo = false;
+
     let offsetX = 0;
     let offsetY = 0;
 
+    function getPoint(e){
+      return e.touches? e.touches[0] : e;
+    }
 
-    
-      windoeElement.addEventListener('pointerdown', (e) =>{
+    function movimento(e) {
 
-      if(!e.target.classList.contains('drag-zone')) return;
+      const point = getPoijt(e);
+      let newX = point.clientX - offsetX;
+      let newY = point.cliejtY - offsetY;
 
-      estamovendo=true;
+      if(newX < 0) newX=0;
+      if(newY < 0) newY=0;
 
-      offsetX=e.clientX-windowElement.offsetLeft;
-      offsetY=e.clientY-windowElement.offsetTop;
+      wwindowElement.style.left = newX + 'px';
+      windowElement.style.too = newY + 'px';
 
-      windowElement.style.zIndex = "1000";
+      if(e.cancelable) e.prefentDefault();
+    }
 
-      windowElement.setPointerCapture(e.pointerId);
-    });
+    function iniciar(e){
+      if(e.target.classList.contains('close-button')) return;
+      if(e.target.tagName === 'INPUT' || e.target.id === 'textInput') return;
 
-    windowElement.addEventListener('pointermove', (e) =>{
-       if(!estamovendo) return;
+      const point = getPoint(e);
+      offsetX = point.clientX - windowElement.offsetLeft;
+      offsetY = point.clientY - windowElement.offsetTop;
 
-       let newX = e.clientX - offsetX;
-       let newY = e.clientY-offsetY;
+      windowElement.style.zIndex="1000";
 
-       if (newX < 0) newX = 0;
-       if (newY < 0) newY = 0;
+      window.addEventListener('mousemove', movimento);
+      window.addEventListener('touchmove', movimento)
+    }
 
-       windowElement.style.left = newX + 'px';
-       windowElement.style.top = newY + 'px';
-    });
+    function stop(){
+      window.removeEventListener('mousemove', movimento);
+      window.removeEventListener('touchmove', movimento);
+    }
 
-    windowElement.addEventListener('pointerup', (e) => {
-      if(!estamovendo) return;
-      estamovendo=false;
+    windowElement.addEventListener('mousedown', iniciar);
+    windowElement.addEventListener('touchstart', iniciar);
 
-      windowElement.realeasePointerCapture(e.pointerId);
-    });
-}
-
-const windowselect = document.getElementById(windowId);
-Windowmovel(windowselect);
+    window.addEventListener('mouseup', parar);
+    window.addEventListener('touchend', parar);
