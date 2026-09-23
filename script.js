@@ -54,7 +54,7 @@ function Windowmovel(windowElement){
       maiorzIndex++;
       windowElement.style.zIndex=maiorzIndex;
 
-      window.addEventListener('mousemove', movimento);
+      window.addEventListener('mousemove', movimento, { passive: false });
       window.addEventListener('touchmove', movimento)
     }
 
