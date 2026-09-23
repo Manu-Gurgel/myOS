@@ -21,7 +21,7 @@ function closeWindow(windowId){
 let maiorzIndex = 10;
 
 function Windowmovel(windowElement){
-
+   windowElement.querySelector(".window-geral");
 
     let offsetX = 0;
     let offsetY = 0;
