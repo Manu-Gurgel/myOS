@@ -18,7 +18,7 @@ function closeWindow(windowId){
    document.getElementById(windowId).style.display="none";
 }
 
-let maiorzIndex = "10";
+let maiorzIndex = 10;
 
 function Windowmovel(windowElement){
 
