@@ -22,6 +22,7 @@ let maiorzIndex = 10;
 
 function Windowmovel(windowElement){
 
+
     let offsetX = 0;
     let offsetY = 0;
 
@@ -66,6 +67,10 @@ function Windowmovel(windowElement){
 
     window.addEventListener('mouseup', stop);
     window.addEventListener('touchend', stop);
+
   }
+
+
+  document.querySelectorAll(".window-geral").forEach(Windowmovel);
 
   
