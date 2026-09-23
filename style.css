@@ -59,7 +59,7 @@ width: 70px !important;
 
 
 .window-title{
- font-size:30px;
+ font-size:25px;
  height:40px;
  width:100%;
  background-color: rgb(66, 176, 188);
@@ -109,7 +109,7 @@ position: relative;
 height: auto;
 width: 250px;
 z-index:10;
-border-radius: 20px;
+border-radius: 40px;
 }
 
 #notes{
