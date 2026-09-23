@@ -66,3 +66,4 @@ function Windowmovel(windowElement){
 
     window.addEventListener('mouseup', parar);
     window.addEventListener('touchend', parar);
+  }
