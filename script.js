@@ -18,7 +18,7 @@ function closeWindow(windowId){
    document.getElementById(windowId).style.display="none";
 }
 
-let maiorzIndex = "1000";
+let maiorzIndex = "10";
 
 function Windowmovel(windowElement){
 
@@ -26,7 +26,7 @@ function Windowmovel(windowElement){
     let offsetY = 0;
 
     function getPoint(e){
-      return e.touches? e.touches[0] : e;
+      return e.touches ? e.touches[0] : e;
     }
 
     function movimento(e) {
@@ -40,8 +40,6 @@ function Windowmovel(windowElement){
 
       windowElement.style.left = newX + 'px';
       windowElement.style.top = newY + 'px';
-
-      if(e.cancelable) e.preventDefault();
     }
 
     function iniciar(e){
@@ -54,8 +52,8 @@ function Windowmovel(windowElement){
       maiorzIndex++;
       windowElement.style.zIndex=maiorzIndex;
 
-      window.addEventListener('mousemove', movimento, { passive: false });
-      window.addEventListener('touchmove', movimento)
+      window.addEventListener('mousemove', movimento);
+      window.addEventListener('touchmove', movimento);
     }
 
     function stop(){
@@ -69,3 +67,5 @@ function Windowmovel(windowElement){
     window.addEventListener('mouseup', stop);
     window.addEventListener('touchend', stop);
   }
+
+  
