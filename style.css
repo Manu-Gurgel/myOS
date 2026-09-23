@@ -6,7 +6,7 @@ body{
     overflow-x: hidden;
     margin: 0;
     height: 100vh;
-    width:100%;
+    width:100vw;
     font-family: sans-serif;
     background-repeat:no-repeat; /*nao repetir a imagem fundo*/
     box-sizing: border-box; 
@@ -119,5 +119,9 @@ border-radius: 20px;
     top:150px;
     left:10px;
     z-index: 10;
+}
+
+#window-wth{
+    display:none;
 }
 
