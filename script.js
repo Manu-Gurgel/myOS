@@ -29,15 +29,15 @@ function Windowmovel(windowElement){
 
     function movimento(e) {
 
-      const point = getPoijt(e);
+      const point = getPoint(e);
       let newX = point.clientX - offsetX;
-      let newY = point.cliejtY - offsetY;
+      let newY = point.clientY - offsetY;
 
       if(newX < 0) newX=0;
       if(newY < 0) newY=0;
 
-      wwindowElement.style.left = newX + 'px';
-      windowElement.style.too = newY + 'px';
+      windowElement.style.left = newX + 'px';
+      windowElement.style.top = newY + 'px';
 
       if(e.cancelable) e.prefentDefault();
     }
@@ -64,6 +64,6 @@ function Windowmovel(windowElement){
     windowElement.addEventListener('mousedown', iniciar);
     windowElement.addEventListener('touchstart', iniciar);
 
-    window.addEventListener('mouseup', parar);
-    window.addEventListener('touchend', parar);
+    window.addEventListener('mouseup', stop);
+    window.addEventListener('touchend', stop);
   }
