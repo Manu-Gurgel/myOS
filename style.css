@@ -10,6 +10,11 @@ body{
     box-sizing: border-box; /*fixa o tamanho*/
 }
 
+textarea{
+    display:block;
+    margin-bottom:10px;
+}
+
 .topbar{
     height:45px;
     width:100%;
@@ -71,7 +76,7 @@ height:auto;
 min-height:100px;
 width:100%;
 font-size:15px;
-padding:50px 10px;
+padding:8px 10px;
 color:rgb(250, 250, 250);
 box-sizing: border-box;
 align-items: center;
@@ -119,15 +124,16 @@ top:5px;
 right:5px;
 z-index: 11;
 border-radius: 50%;
-width: 20px;     
-height: 20px;   
+width: 15px;     
+height: 15px;
+border:none;   
 }
 
 .enter-button{
 position: absolute;
 z-index: 11;
 border-radius: 15px;
-
+border:none;
 }
 
 .textImput{
@@ -136,6 +142,7 @@ field-sizing: content;
 width: 150px;
 height:auto;
 border-radius: 15px;
+border:none;
 }
 
 
