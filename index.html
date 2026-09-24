@@ -41,12 +41,13 @@
           <button class="close-button" onclick="closeWindow('window-wth')"></button>
 
           <div class="window-body">
-            <textarea class="textInput" placeholder="Search a city weather"></textarea>
-            <button class="enter-button" onclick="searchWeather()"> Search </button>
+            <textarea class="textInput" id="weather-input" placeholder="Search a city weather"></textarea>
+            <button class="enter-button" onclick="searchWeather(document.getElementbyId('weather-input').value)"> Search </button>
             
             <div class="weather-info">
-              <h1 id="city-name">City Name</h1>
-              <h1 id="city-weather">-- °C</h1>
+              <div id="city-name">City Name</div>
+              <br>
+              <div id="city-weather">-- °C</div>
             </div>
           </div>
         </div>

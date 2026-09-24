@@ -72,6 +72,7 @@ function Windowmovel(windowElement){
 
 
   document.querySelectorAll(".window-geral").forEach(Windowmovel);
+  
 
   async function searchWeather(Searched){
     const name = document.getElementById('city-name');
