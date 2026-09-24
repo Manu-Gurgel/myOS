@@ -78,24 +78,6 @@ align-items: center;
 cursor: move;
 }
 
-#window-nts{
-    display:none;
-}
-
-.close-button{
-position: absolute;
-top:5px;
-right:5px;
-z-index: 11;
-}
-
-#weather{
-    user-select: none;
-    left:20px;
-    top:75px;
-    z-index:10;
-}
-
 .window-geral{
 position: absolute;
 height: auto;
@@ -115,7 +97,41 @@ backdrop-filter:blur(8px);
     z-index: 10;
 }
 
+#weather{
+user-select: none;
+left:20px;
+top:75px;
+z-index:10;
+}
+
+
 #window-wth{
     display:none;
 }
+
+#window-nts{
+    display:none;
+}
+
+.close-button{
+position: absolute;
+top:5px;
+right:5px;
+z-index: 11;
+}
+
+.enter-button{
+position: absolute;
+}
+
+.textImput{
+position: absolute;
+width: 150px;
+height:auto;
+}
+
+
+
+
+
 
