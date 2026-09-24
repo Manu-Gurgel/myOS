@@ -42,11 +42,10 @@
 
           <div class="window-body">
             <textarea class="textInput" id="weather-input" placeholder="Search a city weather"></textarea>
-            <button class="enter-button" onclick="searchWeather(document.getElementbyId('weather-input').value)"> Search </button>
-            
+            <button class="enter-button" onclick="searchWeather('weather-input')"> Search </button>
+            <br>
             <div class="weather-info">
               <div id="city-name">City Name</div>
-              <br>
               <div id="city-weather">-- °C</div>
             </div>
           </div>
