@@ -124,8 +124,8 @@ top:5px;
 right:5px;
 z-index: 11;
 border-radius: 50%;
-width: 15px;     
-height: 15px;
+width: 10px;     
+height: 10px;
 border:none;   
 }
 
@@ -140,6 +140,7 @@ border:none;
 position: absolute;
 field-sizing: content; 
 width: 150px;
+max-width: 150px;
 height:auto;
 border-radius: 15px;
 border:none;
