@@ -75,13 +75,13 @@ function Windowmovel(windowElement){
   
 
   async function searchWeather(Searched){
-    const inputElement = document.getById('weather-input');
-    if(!inputElement || inputElement.value.trim()){
+    const inputElement = document.getElementById('weather-input');
+    if(!inputElement || inputElement.value.trim() === ""){
       alert("Please enter a city name.");
       return;
     }
   
-    const Searched = inputElement.value.trim();
+    Searched = inputElement.value.trim();
     const name = document.getElementById('city-name');
     const temp = document.getElementById('city-weather');
 
