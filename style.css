@@ -118,16 +118,22 @@ position: absolute;
 top:5px;
 right:5px;
 z-index: 11;
+border-radius: 100px;
 }
 
 .enter-button{
 position: absolute;
+z-index: 11;
+border-radius: 15px;
+
 }
 
 .textImput{
 position: absolute;
+field-sizing: content; 
 width: 150px;
 height:auto;
+border-radius: 15px;
 }
 
 
