@@ -73,4 +73,37 @@ function Windowmovel(windowElement){
 
   document.querySelectorAll(".window-geral").forEach(Windowmovel);
 
+  async function searchWeather(Searched){
+    const name = document.getElementById('city-name');
+    const temp = document.getElementById('city-weather');
+
+    name.innerText="Loading...";
+    temp.innerText="-- °C";
+
+    try{
+      const geoResposta = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(Searched)}&count=1`);
+      const geoDados = await geoResposta.json();
+
+      if(!geoDados.results) {
+       name.innerText="Not Found";
+       temp.innerText="-- °C";
+       return;
+      }
+
+      const realName = geoDados.results[0].name;
+      const lat = geoDados.results[0].latitude;
+      const lon = geoDados.results[0].longitude;
+
+      const climaResposta = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+      const climaDados = await climaResposta.json();
+
+      name.innerText = realName;
+      temp.innerText = climaDados.current_weather.temperature + " °C";
+    }
+      catch (erro){
+      name.innerText="Error";
+      temp.innerText = "-- °C";
+      }
+    }
+
   

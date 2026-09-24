@@ -32,14 +32,23 @@
            <button class="close-button" onclick="closeWindow('window-nts')"> X </button>
            <div class="window-body">
            <input type="text" id="textInput" placeholder="Write your notes">
+           <button class"enter-button" onclick="searchWeather()"
            </div>
         </div>
 
         <div class = "window-geral" id = "window-wth">
+
           <div class = "window-title"> Weather Search</div>
           <button class="close-button" onclick="closeWindow('window-wth')"> X </button>
+
           <div class="window-body">
             <input type="text" id="textweather" placeholder="Search a city weather">
+            <button class "enter-button" onclick"searchWeather()"> Search </button>
+            
+            <div class="weather-info">
+              <p id="city-name">City Name</p>
+              <h2 id="city-weather">-- °C</h2>
+            </div>
           </div>
         </div>
 
