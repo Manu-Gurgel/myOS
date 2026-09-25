@@ -114,30 +114,35 @@ function Windowmovel(windowElement){
       }
     }
 
-    let totalexpression = document.getElementbyId('screen');
+    let totalexpression = document.getElementById('screen');
 
-    function expression(Buttonselected){
-       const Elementselected = document.getElementById(Buttonselected);
-       totalexpression += Elementselected;
-       totalexpression.innerText=totalexpression;
+    function expression(caractere){
+       elementSelected=getElementById(caractere).innerText;
+       totalexpression.innerText += elementSelected;
     }
 
     function erase(){
-      totalexpression--;
-      totalexpression.innerText=totalexpression;
+      totalexpression.innerText=totalexpression.innerText.slice(0, -1);
     }
 
     function clean(){
-    totalexpression="";
     totalexpression.innerText="";
     }
 
     function result(){
-     if(totalexpression.value.trim ==="" || !totalexpression){
-       alert("Please, enter a expression"){
+     if(totalexpression.innerText.trim() === "" || !totalexpression){
+       alert("Please, enter a expression")
        return;
        }
-     }
-    }
+
+      try{
+        totalexpression.innerText= eval(totalexpression.innerText);
+      }
+      catch(erro){
+        totalexpression.innerText="Error";
+        }
+      }
+     
+    
 
   
