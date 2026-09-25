@@ -136,7 +136,14 @@ function Windowmovel(windowElement){
        }
 
       try{
-        totalexpression.innerText= eval(totalexpression.innerText);
+        let equation = totalexpression.innerText;
+
+        if(equation.includes('%')){
+          equation=equation.replace(/%/g, '/100');
+        }
+
+        totalexpression.innerText= eval(equation);
+        
       }
       catch(erro){
         totalexpression.innerText="Error";
