@@ -117,7 +117,7 @@ function Windowmovel(windowElement){
     let totalexpression = document.getElementById('screen');
 
     function expression(caractere){
-       elementSelected=getElementById(caractere).innerText;
+       elementSelected=document.getElementById(caractere).innerText;
        totalexpression.innerText += elementSelected;
     }
 
