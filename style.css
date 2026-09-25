@@ -38,6 +38,7 @@ textarea{
     justify-content:flex-start;
     position: absolute;
     transition: transform 0,2s ease, box-shadow transform 0,2s ease;
+    align-items: center;
 }
 
 .icone-geral:hover{
@@ -106,20 +107,20 @@ backdrop-filter:blur(8px);
 #notes{
     user-select: none;
     top:180px;
-    left:20px;
+    left:25px;
     z-index: 10;
 }
 
 #weather{
 user-select: none;
-left:20px;
+left:25px;
 top:75px;
 z-index:10;
 }
 
 #calculator{
 user-select: none;
-left:20px;
+left:25px;
 top:295px;
 z-index:10;
 }
@@ -179,7 +180,7 @@ font-size:15px;
     text-align: center;
     cursor:move;
     color: white;
-    padding: 10px;
+    padding: 7px 10px;
 }
 
 .calculator-body{
