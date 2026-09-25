@@ -37,6 +37,11 @@ textarea{
     flex-direction: column;
     justify-content:flex-start;
     position: absolute;
+    transition: transform 0,2s ease, box-shadow transform 0,2s ease;
+}
+
+.icone-geral:hover{
+   transform: translateY(-8px);
 }
 
 .icone-img{
@@ -111,12 +116,23 @@ top:75px;
 z-index:10;
 }
 
+#calculator{
+user-select: none;
+left:20px;
+top:295px;
+z-index:10;
+}
+
 
 #window-wth{
     display:none;
 }
 
 #window-nts{
+    display:none;
+}
+
+#window-cltr{
     display:none;
 }
 
@@ -154,6 +170,30 @@ font-size:15px;
 font-size:15px;
 }
 
+.calculator-screen{
+    width: 100%;
+    height: 30px;
+    background-color: rgba(66, 176, 188, 0.6);
+    font-size:20px;
+    text-align: center;
+}
+
+.calculator-body{
+    display: grab;
+    width: 100%;
+    height:300px;
+    gap:5px 5px;
+    padding:5px 5px;
+    background-color: rgba(83, 191, 206, 0.6);
+}
+
+.number-button{
+    width:50px;
+    height:60px;
+    background-color: rgba(83, 191, 206, 0.6);
+    text-align: center;
+    font-size: 30px;
+}
 
 
 

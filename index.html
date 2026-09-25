@@ -26,6 +26,11 @@
         <div class = "icone-text">Notes</div>
       </div>
 
+      div<class="icone-geral" onclick="openWindow('window-cltr')" id="calculator">
+        <div class = "icone-img"> <img src="pictures/calculator.png" height="70" width="70"></div>
+        <div class= "icone-text">Calculator</div>
+      </div>
+
 
         <div class="window-geral" id="window-nts">
            <div class="window-title">Notes</div>
@@ -50,6 +55,45 @@
             </div>
           </div>
         </div>
+
+
+      <div class="window-geral" id="window-cltr">
+        <button class="close.button" onclick="closeWindow('window-cltr')"></button>
+        <div class="calculator-screen" id="screen">0</div>
+
+        <div class = "calculator-body">
+
+          <button class="operation-button" id="C" onclick="erase()"></button>
+          <button class="operation-button" id="open-parenteses" onclick="expression('open-parenteses')">(</button>
+          <button class="operation-button" id="close-parenteses" onclick="expression('close-parenteses')">)</button>
+          <button class="operation-button" id="plus" onclick="expression('plus')">+</button>
+
+          <button class="number-button" id="1" onclick="expresion('1')">1</button>
+          <button class="number-button" id="2" onclick="expression('2')">2</button>
+          <button class="number-number" id="3" onclick="expression('3')">3</button>
+          <button class="operation-button" id="minus" onclick="expression('minus')">-</button>
+
+          <button class="number-button" id="4" onclick="expression('4')">4</button>
+          <button class="number-button" id="5" onclick="expression('5')">5<button>
+          <button class="number-button" id="6" onclick="expression('6')">6</button>
+          <button class="operation-button" id="multiply" onclick="expression('multiply')">*</button>
+
+          <button class="number-button" id="7" onclick="expression('7')">7</button>
+          <button class="number-button" id="8" onclick="expression('8')">8</button>
+          <button class="number-button" id="9" onclick="expression('9')">9</button>
+          <button class="operation-button" id="division" onclick="result('division')">/</button>
+
+          <button class="number-button" id="0" onclick="expression('0')">0</button>
+          <button class="number-button" id="point">.</button>
+          <button class="number-button" id="percent" onclick="porcentagem('percent')">%</button>
+          <button class="operation-button" onclick="result()">=</button>
+          
+  
+          
+        </div>
+      </div>
+
+
 
 
 
