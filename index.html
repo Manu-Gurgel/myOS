@@ -26,7 +26,7 @@
         <div class = "icone-text">Notes</div>
       </div>
 
-      div<class="icone-geral" onclick="openWindow('window-cltr')" id="calculator">
+        <div class="icone-geral" onclick="openWindow('window-cltr')" id="calculator">
         <div class = "icone-img"> <img src="pictures/calculator.png" height="70" width="70"></div>
         <div class= "icone-text">Calculator</div>
       </div>
@@ -63,14 +63,14 @@
 
         <div class = "calculator-body">
 
-          <button class="operation-button" id="C" onclick="erase()"></button>
+          <button class="operation-button" onclick="clean()">C</button>
           <button class="operation-button" id="open-parenteses" onclick="expression('open-parenteses')">(</button>
           <button class="operation-button" id="close-parenteses" onclick="expression('close-parenteses')">)</button>
           <button class="operation-button" id="plus" onclick="expression('plus')">+</button>
 
           <button class="number-button" id="1" onclick="expresion('1')">1</button>
           <button class="number-button" id="2" onclick="expression('2')">2</button>
-          <button class="number-number" id="3" onclick="expression('3')">3</button>
+          <button class="number-button" id="3" onclick="expression('3')">3</button>
           <button class="operation-button" id="minus" onclick="expression('minus')">-</button>
 
           <button class="number-button" id="4" onclick="expression('4')">4</button>
@@ -85,11 +85,8 @@
 
           <button class="number-button" id="0" onclick="expression('0')">0</button>
           <button class="number-button" id="point">.</button>
-          <button class="number-button" id="percent" onclick="porcentagem('percent')">%</button>
+          <button class="number-button" id="percent" onclick="porcentagem()">%</button>
           <button class="operation-button" onclick="result()">=</button>
-          
-  
-          
         </div>
       </div>
 

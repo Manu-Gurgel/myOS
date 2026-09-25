@@ -77,7 +77,7 @@ function Windowmovel(windowElement){
   async function searchWeather(Searched){
     const inputElement = document.getElementById('weather-input');
     if(!inputElement || inputElement.value.trim() === ""){
-      alert("Please enter a city name.");
+      alert("Please, enter a city name.");
       return;
     }
   
@@ -112,6 +112,32 @@ function Windowmovel(windowElement){
       name.innerText="Error";
       temp.innerText = "-- °C";
       }
+    }
+
+    let totalexpression = document.getElementbyId('screen');
+
+    function expression(Buttonselected){
+       const Elementselected = document.getElementById(Buttonselected);
+       totalexpression += Elementselected;
+       totalexpression.innerText=totalexpression;
+    }
+
+    function erase(){
+      totalexpression--;
+      totalexpression.innerText=totalexpression;
+    }
+
+    function clean(){
+    totalexpression="";
+    totalexpression.innerText="";
+    }
+
+    function result(){
+     if(totalexpression.value.trim ==="" || !totalexpression){
+       alert("Please, enter a expression"){
+       return;
+       }
+     }
     }
 
   
