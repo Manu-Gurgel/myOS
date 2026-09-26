@@ -10,6 +10,10 @@ function updateclock(){
 setInterval(updateclock, 1000);
 updateclock();
 
+
+
+
+
 function openWindow(windowId){
    document.getElementById(windowId).style.display = "block";
 }
@@ -17,6 +21,10 @@ function openWindow(windowId){
 function closeWindow(windowId){
    document.getElementById(windowId).style.display="none";
 }
+
+
+
+
 
 let maiorzIndex = 10;
 
@@ -70,11 +78,12 @@ function Windowmovel(windowElement){
 
   }
 
-
   document.querySelectorAll(".window-geral").forEach(Windowmovel);
 
 
-  
+
+
+
 
   async function searchWeather(){
     const inputElement = document.getElementById('weather-input');
@@ -115,6 +124,7 @@ function Windowmovel(windowElement){
       temp.innerText = "-- °C";
       }
     }
+
 
 
 
@@ -163,6 +173,7 @@ function Windowmovel(windowElement){
 
 
 
+
       function ExecuteSearch(texted){
         const Searched =document.getElementById(texted);
 
@@ -174,8 +185,4 @@ function Windowmovel(windowElement){
         window.open(`https://www.google.com/search?q=${encodeURIComponent(Searched.value)}`);
       }
 
-      
-     
     
-
-  

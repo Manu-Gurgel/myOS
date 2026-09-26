@@ -15,26 +15,48 @@
       </div>
 
 
+
+
       <div class="icone-geral" onclick="openWindow('window-wth')" id="weather">
         <div class="icone-img"><img src="pictures/weather.png" height="70" width="70"></div>
         <div class="icone-text">Weather</div>
       </div>
-
-
+    
+      
+      
       <div class="icone-geral" onclick="openWindow('window-nts')" id="notes"> 
         <div class="icone-img"><img src="pictures/notes.png" height="70" width="70"></div>
         <div class = "icone-text">Notes</div>
       </div>
+
+
 
       <div class="icone-geral" onclick="openWindow('window-cltr')" id="calculator">
         <div class="icone-img"> <img src="pictures/calculator.png" height="70" width="70"></div>
         <div class="icone-text">Calculator</div>
       </div>
 
+
+
       <div class="icone-geral" id="search" onclick="openWindow('window-srch')">
         <div class="icone-img"><img src="pictures/search.png" height="70" width="70"></div>
         <div class="icone-text">Search</div>
       </div>
+
+
+
+      <div class="icone-geral" id="curiosities" onclick="openWindow(window-crst)">
+        <div class="icone-img"> <img src="pictures/curiosities.png" height="70" width="70"></div>
+        <div class="icone-text">Curiositys</div>
+      </div>
+
+
+
+      <div class="icone-geral" id="differentGame" onclick="openWindow(window-dfgm)">
+       <div class="icone-img"><img src="pictures/differentgame.png" height="70", with="70"></div>
+       <div class="icone-text">Find the different</div>
+      </div>
+
 
 
 
@@ -47,6 +69,8 @@
            <textarea class="textInput" placeholder="Write your notes"></textarea>
            </div>
         </div>
+
+
 
 
 
@@ -64,6 +88,8 @@
             </div>
           </div>
         </div>
+
+
 
 
 
@@ -102,6 +128,10 @@
 
 
 
+
+
+
+
       <div class="window-geral" id="window-srch">
         <div class="window-title">Search</div>
         <button class="close-button" onclick="closeWindow('window-srch')"></button>
@@ -111,6 +141,106 @@
          <button class="enter-button" onclick="ExecuteSearch('search-text')">Search</button>
         </div>
       </div>
+
+
+
+
+
+
+      <div class="window-geral" id="window-crst">
+        <div class="window-title">Aleatory curiosities</div>
+        <button class="close-button" onclick="closeWindow(window-crst)"></button>
+
+        <div class="window-body">
+
+         <div class="variable-window" id="first">
+          <div class="curiosity-text">Dogs can learn humans routines and predict what their owners are going to do. And somehow you see the sky black and don't get a </div>
+          <button class="change-window" id="next" onclick="openWindow('second')" onclick="closeWindow('first')">Next</button>
+         </div>
+
+         <div class="variable-window" id="second" style="display: none">
+          <div class="curiosity-text">OH MY GOD, BANANAS ARE RADIOACTIVE. You only have to eat a hundred million of them to notice the effect</div>
+          <button class="change-window" id="next" onclick="openWindow('third')" onclick="closeWindow('second')" >Next</button>
+          <button class="change-window" id="back" onclick="openWindow('first')" onclick="closeWindow('second')">Back</button>
+         </div>
+
+         <div class="variable-window" id="third" style="display: none">
+          <div class="curiosity-text">People tend to underestimate how noticeable their own mistakes are to others. Don't worry, the world does't turns aroud you, you are insignifically, be happy</div>
+          <button class="change-window" id="next" onclick="openWindow('fourth')" onclick="closeWindow('third')">Next</button>
+          <button class="change-window" id="back" onclick="openWindow('second')" onclick="closeWindow('third')">Back</button>
+         </div>
+
+         <div class="variable-window" id="fourth" style="display: none">
+          <div class="curiosity-text">
+           Plants can be affected by music. So, hey, don't be an egoist, share your buds with your plants, they like music too</div>
+           <button class="change-window" id="next" onclick="openWindow('fifth')" onclick="closeWindow('fourth')">Next</button>
+           <button class="change-window" id="back" onclick="openWindow('third')" onclick="closeWindow('fourth')">Back</button>
+         </div>
+
+         <div class="variable-window" id="fifth" style="display: none">
+          <div class="curiosity-text">
+           Your work table is more dirty than a public bathroom private. Eww,why aren't you going to clean it now?</div>
+           <button class="change-window" id="next" onclick="openWindow('sixth')" onclick="closeWindow('fifth')">Next</button>
+           <button class="change-window" id="back" onclick="openWindow('fourth')" onclick="closeWindow('fifth')">Back</button>
+         </div>
+
+         <div class="variable-window" id="sixth" style="display: none">
+          <div class="curiosity-text">
+            Crows can remember human faces for years. Some friends you see every day always forget your birthday, a crow remembers you only because you annoyed it once. If i were you, i would change them for crows</div>
+           <button class="change-window" id="next" onclick="openWindow('seventh')" onclick="closeWindow('sixth')">Next</button>
+           <button class="change-window" id="back" onclick="openWindow('fifth')" onclick="closeWindow('sixth')">Back</button>
+         </div>
+
+         <div class="variable-window" id="seventh" style="display: none">
+          <div class="curiosity-text">
+            Cows have best friends and can become estressed when separeted from them.Even cows are more sociable than some people I know </div>
+           <button class="change-window" id="next" onclick="openWindow('eighth')" onclick="closeWindow('seventh')">Next</button>
+           <button class="change-window" id="back" onclick="openWindow('sixth')" onclick="closeWindow('seventh')">Back</button>
+         </div>
+
+         <div class="variable-window" id="eighth" style="display: none">
+          <div class="curiosity-text">
+           Dogs can learn hundreds of words and can distinguish between human intructions. Your dog understands you, it just chooses not to listen sometimes. I think I have friends like this</div>
+           <button class="change-window" id="next" onclick="openWindow('ninth')" onclick="closeWindow('eighth')">Next</button>
+           <button class="change-window" id="back" onclick="openWindow('seventh')" onclick="closeWindow('eighth')">Back</button>
+         </div>
+
+         <div class="variable-window" id="ninth" style="display: none">
+          <div class="curiosity-text">
+           Butterflies taste with their feet. Imagine have to step in your food before deciding if it's good</div>
+           <button class="change-window" id="next" onclick="openWindow('tenth')" onclick="closeWindow('ninth')">Next</button>
+           <button class="change-window" id="back" onclick="openWindow('eighth')" onclick="closeWindow('ninth')">Back</button>
+         </div>
+
+
+         <div class="variable-window" id="tenth" style="display: none">
+          <div class="curiosity-text">
+            Some turtles can breath trought specialized tissues near their rear end. Evolution really said,"We need an inexpected solution", and nobody questioned it</div>
+           <button class="change-window" id="next" onclick="openWindow('first')" onclick="closeWindow('tenth')">Next</button>
+           <button class="change-window" id="back" onclick="openWindow('ninth')" onclick="closeWindow('tenth')">Back</button>
+         </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="window-geral" id="window-dfgm">
+        <div class="window-title">Where's the different?</div>
+        <button class="close-button" onclick="closeWindow(window-dfgm)"></button>
+
+        <div class="dfgame-body">
+          <div class="variable-window" id="gameIntroduction">
+            Hi, this is a find the different emoji game, you have five seconds to find the emoji, when you choose the correct one, you pass to another fase, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
+            <button class="next-button" onclick="closeWindow('gameIntroduction')" onclick="openWindow('fase1')"></button>
+          </div>
+  
+         <div class="game-window" id="fase1" style="display: none"></div>
+        </div>
+      </div>
+
+
 
 
       <script src="script.js"></script>

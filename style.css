@@ -16,6 +16,16 @@ textarea{
     margin-bottom:10px; /*cria um espaço entre ele e o proximo elemento*/
 }
 
+.textInput{
+field-sizing: content; /*faz o campo aumentar comforme o usuario digita*/
+width: 220px;
+max-width: 220px;
+height:auto;
+border-radius: 15px;
+border:none;
+resize:none; /*impede a mudança de tamanho puxando o canto*/
+}
+
 input, textarea, .textInput {
   user-select: text !important;
 }
@@ -74,6 +84,61 @@ input, textarea, .textInput {
 }
 
 
+/**/
+#notes{
+    left: 25px;
+    top:180px;
+    z-index: 10;
+}
+
+#weather{
+left:25px;
+top:75px;
+z-index:10;
+}
+
+#calculator{
+left:120px;
+top:75px;
+z-index:10;
+}
+
+#search{
+ left: 120px;
+ top: 180px;
+ z-index: 10;
+}
+
+#curiosities{
+left: 20px;
+top: 295px;
+z-index: 10;
+}
+
+#differentgame{
+left:120px;
+top:295px;
+z-index: 10;
+}
+
+
+
+
+/*Window configurations*/
+.window-geral{
+position: absolute;
+height: auto;
+width: 250px;
+z-index:10;
+border-radius: 20px;
+overflow: hidden;
+left: 50px;
+top: 50px;
+backdrop-filter:blur(8px); /*efeito do borrado*/
+}
+
+
+
 .window-title{
  font-size:25px;
  height:35px;
@@ -100,43 +165,10 @@ flex-direction: column;
 display: flex;
 }
 
-.window-geral{
-position: absolute;
-height: auto;
-width: 250px;
-z-index:10;
-border-radius: 20px;
-overflow: hidden;
-left: 50px;
-top: 50px;
-backdrop-filter:blur(8px); /*efeito do borrado*/
-}
-
-#notes{
-    left: 25px;
-    top:180px;
-    z-index: 10;
-}
-
-#weather{
-left:25px;
-top:75px;
-z-index:10;
-}
-
-#calculator{
-left:120px;
-top:75px;
-z-index:10;
-}
-
-#search{
- left: 120px;
- top: 180px;
- z-index: 10;
-}
 
 
+
+/*window start display*/
 #window-wth{
     display:none; /*deixa invisivel*/
 }
@@ -153,6 +185,18 @@ z-index:10;
     display: none;
 }
 
+#window-crst{
+    display:none;
+}
+
+#window-dfgm{
+    display: none;
+}
+
+
+
+
+/*button types*/
 .close-button{
 top:10px;
 right:5px;
@@ -169,16 +213,53 @@ border-radius: 15px;
 border:none;
 }
 
-.textInput{
-field-sizing: content; /*faz o campo aumentar comforme o usuario digita*/
-width: 220px;
-max-width: 220px;
-height:auto;
-border-radius: 15px;
-border:none;
-resize:none; /*impede a mudança de tamanho puxando o canto*/
+.number-button{
+    width:50px;
+    height:60px;
+    background-color: rgba(83, 191, 206, 0.5);
+    text-align: center;
+    font-size: 30px;
+    border-radius:20px;
+    border:none;
 }
 
+.operation-button{
+    width:50px;
+    height:60px;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(47, 162, 164, 0.5);
+    border-radius:20px;
+    border:none;
+}
+
+.change-button{
+    width:70px;
+    height:20px;
+    text-align: center;
+    font-size: 15px;
+    background-color: rgba(250, 248, 248, 0.5);
+    border-radius:20px;
+    border:none;
+}
+
+#back{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+#next{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;   
+}
+
+
+
+
+
+/*weather things*/
 #city-name{
 font-size:15px;
 }
@@ -187,6 +268,10 @@ font-size:15px;
 font-size:15px;
 }
 
+
+
+
+/*calculator things*/
 .calculator-screen{
     width: 100%;
     height: 45px;
@@ -214,27 +299,13 @@ font-size:15px;
     cursor:move;
 }
 
-.number-button{
-    width:50px;
-    height:60px;
-    background-color: rgba(83, 191, 206, 0.5);
+
+/*curiosities things*/
+.variable-window{
+    width:100%;
+    min-height:250px;
+    color:white;
     text-align: center;
-    font-size: 30px;
-    border-radius:20px;
-    border:none;
+    font-size: 20px;
+    padding: 10px 15px;
 }
-
-.operation-button{
-    width:50px;
-    height:60px;
-    text-align: center;
-    font-size: 30px;
-    background-color: rgba(47, 162, 164, 0.5);
-    border-radius:20px;
-    border:none;
-}
-
-
-
-
-
