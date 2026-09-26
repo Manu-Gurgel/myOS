@@ -81,6 +81,7 @@ textarea{
  align-items: center;
  cursor: move;
  padding: 10px auto;
+ user-select:none;
 }
 
 .window-body{
@@ -108,7 +109,6 @@ overflow: hidden;
 left: 50px;
 top: 50px;
 backdrop-filter:blur(8px);
-user-select:none;
 }
 
 #notes{
@@ -205,6 +205,7 @@ font-size:15px;
  color: white;
  text-align:center;
  padding: 10px auto;
+ user-select:none;
 }
 
 .calculator-body{
@@ -227,6 +228,7 @@ font-size:15px;
     font-size: 30px;
     border-radius:20px;
     border:none;
+    user-select:none;
 }
 
 .operation-button{
@@ -237,6 +239,7 @@ font-size:15px;
     background-color: rgba(47, 162, 164, 0.5);
     border-radius:20px;
     border:none;
+    user-select:none;
 }
 
 
