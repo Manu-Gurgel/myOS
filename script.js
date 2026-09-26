@@ -141,6 +141,10 @@ function Windowmovel(windowElement){
 
       try{
         let equation = totalexpression.innerText;
+        if(eval(equation).innerText>maxDigits){
+          alert("The result has excess of digits, only 12 digts are visible")
+        }
+        
         totalexpression.innerText= eval(equation);
       }
       catch(erro){
