@@ -72,6 +72,8 @@ function Windowmovel(windowElement){
 
 
   document.querySelectorAll(".window-geral").forEach(Windowmovel);
+
+
   
 
   async function searchWeather(Searched){
@@ -114,6 +116,10 @@ function Windowmovel(windowElement){
       }
     }
 
+
+
+
+
     let totalexpression = document.getElementById('screen');
     const maxDigits = 12;
 
@@ -151,6 +157,23 @@ function Windowmovel(windowElement){
         totalexpression.innerText="Error";
         }
       }
+
+
+
+
+
+      function ExecuteSearch(texted){
+        const Search =document.getElementById(texted).innerText;
+
+        if(!Search || Search.innerText.trim() === ""){
+          Search.innerText="Please, search something"
+          return;
+        }
+
+        window.open('https://www.google.com/search?q=${encodeURIComponent(Search)}`);');
+      }
+
+      
      
     
 
