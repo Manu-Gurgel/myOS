@@ -44,8 +44,8 @@ function Windowmovel(windowElement){
     }
 
     function iniciar(e){
-      if(e.target.classList.contains('close-button')) return;
-      if(e.target.tagName === 'INPUT' || e.target.id === 'textInput') return;
+      if(e.target.classList.contains('close-button') || e.target.classList.containd('enter-button') || e.target.classList.contains('number-button') || e.target.classList.contains('operation-button')) return;
+      if(e.target.tagName === 'INPUT' || e.target.id === 'TEXTAREA') return;
 
       const point = getPoint(e);
       offsetX = point.clientX - windowElement.offsetLeft;
@@ -76,7 +76,7 @@ function Windowmovel(windowElement){
 
   
 
-  async function searchWeather(Searched){
+  async function searchWeather(){
     const inputElement = document.getElementById('weather-input');
     if(!inputElement || inputElement.value.trim() === ""){
       alert("Please, enter a city name.");
@@ -140,14 +140,15 @@ function Windowmovel(windowElement){
     }
 
     function result(){
-     if(totalexpression.innerText.trim() === "" || !totalexpression){
+     if(!totalexpression || totalexpression.innerText.trim() === ""){
        alert("Please, enter a expression")
        return;
        }
 
       try{
         let equation = totalexpression.innerText;
-        if(eval(equation).innerText>maxDigits){
+        equationLength = eval(equation);
+        if(equationLength.length>maxDigits){
           alert("The result has excess of digits, only 12 digts are visible")
         }
         
@@ -170,7 +171,7 @@ function Windowmovel(windowElement){
           return;
         }
 
-        window.open(`https://www.google.com/search?q=${encodeURIComponent(Searched)}`);
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(Searched.value)}`);
       }
 
       

@@ -74,27 +74,27 @@
         <div class = "calculator-body">
 
           <button class="operation-button" onclick="clean()">C</button>
-          <button class="operation-button" id="open-parenteses" onclick="expression('open-parenteses')">(</button>
-          <button class="operation-button" id="close-parenteses" onclick="expression('close-parenteses')">)</button>
-          <button class="operation-button" id="plus" onclick="expression('plus')">+</button>
+          <button class="operation-button" id="(" onclick="expression('(')">(</button>
+          <button class="operation-button" id=")" onclick="expression(')')">)</button>
+          <button class="operation-button" id="+" onclick="expression('+')">+</button>
 
           <button class="number-button" id="1" onclick="expression('1')">1</button>
           <button class="number-button" id="2" onclick="expression('2')">2</button>
           <button class="number-button" id="3" onclick="expression('3')">3</button>
-          <button class="operation-button" id="minus" onclick="expression('minus')">-</button>
+          <button class="operation-button" id="-" onclick="expression('-')">-</button>
 
           <button class="number-button" id="4" onclick="expression('4')">4</button>
           <button class="number-button" id="5" onclick="expression('5')">5</button>
           <button class="number-button" id="6" onclick="expression('6')">6</button>
-          <button class="operation-button" id="multiply" onclick="expression('multiply')">*</button>
+          <button class="operation-button" id="*" onclick="expression('*')">*</button>
 
           <button class="number-button" id="7" onclick="expression('7')">7</button>
           <button class="number-button" id="8" onclick="expression('8')">8</button>
           <button class="number-button" id="9" onclick="expression('9')">9</button>
-          <button class="operation-button" id="division" onclick="expression('division')">/</button>
+          <button class="operation-button" id="/" onclick="expression('/')">/</button>
 
           <button class="number-button" id="0" onclick="expression('0')">0</button>
-          <button class="number-button" id="point" onclick="expression('point')">.</button>
+          <button class="number-button" id="." onclick="expression('.')">.</button>
           <button class="number-button" onclick="erase()">X</button>
           <button class="operation-button" onclick="result()">=</button>
         </div>
