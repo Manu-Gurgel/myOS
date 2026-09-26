@@ -163,10 +163,10 @@ function Windowmovel(windowElement){
 
 
       function ExecuteSearch(texted){
-        const Search =document.getElementById(texted).innerText;
+        const Search =document.getElementById(texted);
 
-        if(!Search || Search.innerText.trim() === ""){
-          Search.innerText="Please, search something"
+        if(Search.value.trim() === ""){
+          Search.value="Ops, nothing to search"
           return;
         }
 
