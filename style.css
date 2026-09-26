@@ -4,29 +4,33 @@ body{
     background-size: cover; /* cobrir todo o fundo */
     background-position: center;/*centraliza o fundo*/
     overflow: hidden; /*esconde overflows*/
-    height: 100vh;
+    height: 100vh; /* faz a imagem ocupar toda a altura tela*/
     font-family: sans-serif;
     background-repeat:no-repeat; /*nao repetir a imagem fundo*/
     box-sizing: border-box; /*fixa o tamanho*/
+    user-select:none;
 }
 
 textarea{
-    display:block;
-    margin-bottom:10px;
+    display:block; /* faz o elemento ocupar a linha toda, empurrando os outros pra baixo*/
+    margin-bottom:10px; /*cria um espaço entre ele e o proximo elemento*/
+}
+
+input, textarea, .textInput {
+  user-select: text !important;
 }
 
 .topbar{
     height:45px;
     width:100%;
     font-size: 25px;
-    display: flex; 
-    justify-content: space-between;
+    display: flex; /*permite organizar itens unidimensionalmente (linha ou coluna)*/
+    justify-content: space-between; /*faz os elementos internos irem pras bordas*/
     background-color: rgba(0, 0, 0, 0.6);
-    align-items: center;
+    align-items: center; /*alinha os itens com o centro do todo horizontalmente*/
     color: rgb(250, 250, 250);
-    padding: 5px 16px;
+    padding: 5px 16px; /*adciona margem interna vertical e horizontal*/
     box-sizing: border-box;
-    user-select: none;
 }
 
 #clock{
@@ -35,39 +39,38 @@ textarea{
 }
 .icone-geral{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* faz os itens se alinharem em coluna*/
     justify-content:flex-start;
-    position: absolute;
-    transition: transform 0,2s ease, box-shadow transform 0,2s ease;
-    align-items: center;
+    position: absolute; /*elemento pode ser colocado em qualquer lugar com coordenadas left e top*/
+    transition: transform 0.4s ease, box-shadow transform 0.4s ease; /*cria uma animaçao para a mudança*/
+    align-items: center; 
 }
 
-.icone-geral:hover{
-   transform: translateY(-8px);
+.icone-geral:hover{ /**/
+   transform: translateY(-8px);/*define quanto muda no eixo Y*/
 }
 
 .icone-img{
  border-radius: 20px;
- -webkit-user-drag:none;
- pointer-events: none;
- user-select: none;
- flex-shrink: 0; 
+ -webkit-user-drag:none; /*impede o arraste da imagem*/
+ pointer-events: none; /*faz o click atravessar esse elemto e executar o que é do elemento atras dele*/
+ flex-shrink: 0; /*impede ue o flex diminua a imagem*/
  display: block;
  height: 70px !important;
  width: 70px !important;
- object-fit:contain;
- margin-left: auto;
- margin-right:auto;
+ object-fit:contain; /*impede a distorçao da imagem*/
+ margin-left: auto; /*define a margem esquerda automaticamente*/
+ margin-right:auto; /*define a margem direita automaticamente*/
 }
 
 
 
 .icone-text{
  font-size: 15px;
- font-weight: bold;
+ font-weight: bold;/*deixa em negrito*/
  color: rgb(250, 250, 250);
  text-align: center;
- margin: 0 auto;
+ margin: 0 auto;/*define a margem dele para o exterior vertical e horizontal*/
 }
 
 
@@ -79,14 +82,12 @@ textarea{
  text-align: center;
  color: rgb(250, 250, 250);
  align-items: center;
- cursor: move;
- padding: 10px auto;
- user-select:none;
+ cursor: move; /*muda o cursor para o de movimento(4 setinhas)*/
+ padding: 10px; /*nao aceita auto*/
 }
 
 .window-body{
 background-color:rgba(83, 191, 206, 0.6);
-height:auto;
 min-height:100px;
 width:100%;
 font-size:20px;
@@ -108,32 +109,28 @@ border-radius: 20px;
 overflow: hidden;
 left: 50px;
 top: 50px;
-backdrop-filter:blur(8px);
+backdrop-filter:blur(8px); /*efeito do borrado*/
 }
 
 #notes{
-    user-select: none;
     left: 25px;
     top:180px;
     z-index: 10;
 }
 
 #weather{
-user-select: none;
 left:25px;
 top:75px;
 z-index:10;
 }
 
 #calculator{
-user-select: none;
 left:120px;
 top:75px;
 z-index:10;
 }
 
 #search{
- user-select:none;
  left: 120px;
  top: 180px;
  z-index: 10;
@@ -141,7 +138,7 @@ z-index:10;
 
 
 #window-wth{
-    display:none;
+    display:none; /*deixa invisivel*/
 }
 
 #window-nts{
@@ -164,7 +161,7 @@ z-index:11;
 border-radius: 50%;
 width: 12px;     
 height: 12px;
-border:none;   
+border:none;  /*tira a borda*/  
 }
 
 .enter-button{
@@ -173,13 +170,13 @@ border:none;
 }
 
 .textInput{
-field-sizing: content; 
+field-sizing: content; /*faz o campo aumentar comforme o usuario digita*/
 width: 220px;
 max-width: 220px;
 height:auto;
 border-radius: 15px;
 border:none;
-resize:none;
+resize:none; /*impede a mudança de tamanho puxando o canto*/
 }
 
 #city-name{
@@ -197,7 +194,7 @@ font-size:15px;
     font-size:30px;
     cursor:move;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: nowrap; /*impede que os numeros quebrem para a linha de baixo*/
 }
 
 #screen{
@@ -205,16 +202,14 @@ font-size:15px;
  color: white;
  text-align:center;
  padding: 10px auto;
- user-select:none;
 }
 
 .calculator-body{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 100%;
-    height: auto;
+    display: grid; /*organiza em grade*/
+    grid-template-columns: repeat(4, 1fr); /*grade de 4 colunas e cada elemento ocupa 1 fraçao(desconta espaçamentos e calcula quanto cada elemento pode ter iguamente)*/
+    width: 100%; /* faz ele ter a maior largura possivel*/
     min-height:300px;
-    gap:2px 2px;
+    gap:2px 2px; /*espaços entre elementos*/
     padding:5px 5px;
     background-color: rgba(83, 191, 206, 0.6);
     cursor:move;
@@ -228,7 +223,6 @@ font-size:15px;
     font-size: 30px;
     border-radius:20px;
     border:none;
-    user-select:none;
 }
 
 .operation-button{
@@ -239,7 +233,6 @@ font-size:15px;
     background-color: rgba(47, 162, 164, 0.5);
     border-radius:20px;
     border:none;
-    user-select:none;
 }
 
 

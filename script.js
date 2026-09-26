@@ -44,8 +44,8 @@ function Windowmovel(windowElement){
     }
 
     function iniciar(e){
-      if(e.target.classList.contains('close-button') || e.target.classList.containd('enter-button') || e.target.classList.contains('number-button') || e.target.classList.contains('operation-button')) return;
-      if(e.target.tagName === 'INPUT' || e.target.id === 'TEXTAREA') return;
+      if(e.target.classList.contains('close-button') || e.target.classList.contains('enter-button') || e.target.classList.contains('number-button') || e.target.classList.contains('operation-button')) return;
+      if(e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
 
       const point = getPoint(e);
       offsetX = point.clientX - windowElement.offsetLeft;
