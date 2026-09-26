@@ -26,6 +26,7 @@ textarea{
     color: rgb(250, 250, 250);
     padding: 5px 16px;
     box-sizing: border-box;
+    user-select: none;
 }
 
 #clock{
@@ -107,7 +108,7 @@ overflow: hidden;
 left: 50px;
 top: 50px;
 backdrop-filter:blur(8px);
-use-select:none;
+user-select:none;
 }
 
 #notes{
