@@ -115,8 +115,12 @@ function Windowmovel(windowElement){
     }
 
     let totalexpression = document.getElementById('screen');
+    const maxDigits = 12;
 
     function expression(caractere){
+      if(totalexpression.innerText.length>=maxDigits){
+        return
+      }
        elementSelected=document.getElementById(caractere).innerText;
        totalexpression.innerText += elementSelected;
     }
@@ -137,13 +141,7 @@ function Windowmovel(windowElement){
 
       try{
         let equation = totalexpression.innerText;
-
-        if(equation.includes('%')){
-          equation=equation.replace(/%/g, '/100');
-        }
-
         totalexpression.innerText= eval(equation);
-        
       }
       catch(erro){
         totalexpression.innerText="Error";

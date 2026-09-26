@@ -26,10 +26,18 @@
         <div class = "icone-text">Notes</div>
       </div>
 
-        <div class="icone-geral" onclick="openWindow('window-cltr')" id="calculator">
-        <div class = "icone-img"> <img src="pictures/calculator.png" height="70" width="70"></div>
-        <div class= "icone-text">Calculator</div>
+      <div class="icone-geral" onclick="openWindow('window-cltr')" id="calculator">
+        <div class="icone-img"> <img src="pictures/calculator.png" height="70" width="70"></div>
+        <div class="icone-text">Calculator</div>
       </div>
+
+      <div class="icone-geral" id="search" onclick="openWindow('window-srch')">
+        <div class="icone-img"><img src="pictures/search.png" height="70" width="70"></div>
+        <div class="icone-text">Search</div>
+      </div>
+
+
+
 
 
         <div class="window-geral" id="window-nts">
@@ -40,8 +48,9 @@
            </div>
         </div>
 
-        <div class = "window-geral" id = "window-wth">
 
+
+        <div class = "window-geral" id = "window-wth">
           <div class = "window-title"> Weather Search</div>
           <button class="close-button" onclick="closeWindow('window-wth')"></button>
 
@@ -55,6 +64,7 @@
             </div>
           </div>
         </div>
+
 
 
       <div class="window-geral" id="window-cltr">
@@ -85,8 +95,19 @@
 
           <button class="number-button" id="0" onclick="expression('0')">0</button>
           <button class="number-button" id="point" onclick="expression('point')">.</button>
-          <button class="number-button" id="percent" onclick="expression('percent')">%</button>
+          <button class="number-button" onclick="erase()">X</button>
           <button class="operation-button" onclick="result()">=</button>
+        </div>
+      </div>
+
+
+
+      <div class="window-geral" id="window-srch">
+        <div class="window-title">Search</div>
+        <button class="closeWindow" onclick="closeWindiw('window-src')"></button>
+
+        <div class="window-body">
+         
         </div>
       </div>
 
