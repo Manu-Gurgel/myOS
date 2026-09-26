@@ -107,6 +107,7 @@ overflow: hidden;
 left: 50px;
 top: 50px;
 backdrop-filter:blur(8px);
+use-select:none;
 }
 
 #notes{
