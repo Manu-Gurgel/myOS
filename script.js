@@ -163,14 +163,14 @@ function Windowmovel(windowElement){
 
 
       function ExecuteSearch(texted){
-        const Search =document.getElementById(texted);
+        const Searched =document.getElementById(texted);
 
-        if(Search.value.trim() === ""){
-          Search.value="Ops, nothing to search"
+        if(Searched.value.trim() === ""){
+          Searched.value="Ops, nothing to search"
           return;
         }
 
-        window.open(`https://www.google.com/search?q=${encodeURIComponent(Search)}`);
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(Searched)}`);
       }
 
       
