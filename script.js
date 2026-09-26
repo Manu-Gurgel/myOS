@@ -170,7 +170,7 @@ function Windowmovel(windowElement){
           return;
         }
 
-        window.open('https://www.google.com/search?q=${encodeURIComponent(Search)}`);');
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(Search)}`);
       }
 
       
