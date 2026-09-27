@@ -171,6 +171,7 @@ function Windowmovel(windowElement){
 
 
 
+      
 
 
 
@@ -184,4 +185,127 @@ function Windowmovel(windowElement){
 
         window.open(`https://www.google.com/search?q=${encodeURIComponent(Searched.value)}`);
       }
+
+
+      
+
+
+
+      const tabuleiro = document.getElementById('tabuleiro');
+      let faseAtual = 1;
+
+      function startFase(normalEmoji, differentEmoji, quantidade, columns){
+
+        tabuleiro.innerHTML="";
+        tabuleiro.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+
+        let listEmoji = Array(quantidade-1).fill(normalEmoji);
+        listEmoji.push(differentEmoji);
+        listEmoji.sort(() => Math.random() - 0,5);
+
+        listEmoji.forEach(emoji => {
+          const button = document.createElement('button');
+          button.textContent = emoji;
+          
+          button.addElementListener(click, () => {
+            if(emoji === normalEmoji){
+              closeWindow('tabuleiro');
+              openWindow('wrongAnswer');
+              faseAtual=1;
+            }
+
+            if(emoji === differentEmoji){
+              faseAtual++;
+              proximaFase();
+            }
+          });
+          tabuleiro.appendChild(button);
+        });
+      }
+
+
+      function proximaFase(){
+
+        if(faseAtual === 1){
+          startFase("🍎","🍏", 20, 5)
+        }
+
+
+         if(faseAtual === 2){
+          startFase("🏴","🏳️", 20, 5)
+        }
+
+        if(faseAtual === 3){
+          start("❤️","🩷", 20, 5)
+        }
+
+
+        if(faseAtual === 4){
+          startFase("🍎","🍏", 20, 5)
+        }
+
+
+        if(faseAtual === 5){
+          startFase("😠","😡", 25, 5)
+        }
+
+        if(faseAtual === 6){
+          startFase("📈","📉", 25, 5)
+        }
+
+        if(faseAtual === 7){
+          startFase("🌜","🌛", 25, 5)
+        }
+
+
+        if(faseAtual === 8){
+          startFase("🌞", "☀️", 25, 5)
+        }
+
+        if(faseAtual === 9){
+          startFase("🪺", "🪹", 30, 5)
+        }
+
+        if(faseAtual === 10){
+          startFase("🐳", "🐋", 30, 5)
+        }
+
+        if(faseAtual === 11){
+          startFase("☔", "☂️", 30, 5)
+        }
+
+          if(faseAtual === 12){
+          startFase("😆", "😄", 30, 5)
+        }
+
+        if(faseAtual === 13){
+          startFase("😍", "🤩", 35, 5)
+        }
+
+        if(faseAtual === 14){
+          startFase("👄", "🫦", 35, 5)
+        }
+
+        if(faseAtual === 15){
+          startFase("🎖️", "🏅", 35, 5)
+        }
+
+        if(faseAtual === 16){
+          startFase("😾", "🐱", 35, 5)
+        }
+
+        if(faseAtual === 17){
+          startFase("👿", "😈", 35, 5)
+        }
+
+        if(faseAtual === 18){
+          openWindow('Win')
+        }
+
+
+        }
+
+
+
+
     
