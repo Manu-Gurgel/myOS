@@ -156,69 +156,69 @@
 
          <div class="variable-window" id="first">
           <div class="curiosity-text">Dogs can learn humans routines and predict what their owners are going to do. And somehow you see the sky black and don't get a </div>
-          <button class="change-window" id="next" onclick="openWindow('second'); closeWindow('first')">Next</button>
+          <button class="next" onclick="openWindow('second'); closeWindow('first')">Next</button>
          </div>
 
          <div class="variable-window" id="second" style="display: none">
           <div class="curiosity-text">OH MY GOD, BANANAS ARE RADIOACTIVE. You only have to eat a hundred million of them to notice the effect</div>
-          <button class="change-window" id="next" onclick="openWindow('third'); closeWindow('second')" >Next</button>
-          <button class="change-window" id="back" onclick="openWindow('first'); closeWindow('second')">Back</button>
+          <button class="next" onclick="openWindow('third'); closeWindow('second')" >Next</button>
+          <button class="back" onclick="openWindow('first'); closeWindow('second')">Back</button>
          </div>
 
          <div class="variable-window" id="third" style="display: none">
           <div class="curiosity-text">People tend to underestimate how noticeable their own mistakes are to others. Don't worry, the world does't turns aroud you, you are insignifically, be happy</div>
-          <button class="change-window" id="next" onclick="openWindow('fourth'); closeWindow('third')">Next</button>
-          <button class="change-window" id="back" onclick="openWindow('second'); closeWindow('third')">Back</button>
+          <button class="next" onclick="openWindow('fourth'); closeWindow('third')">Next</button>
+          <button class="back" onclick="openWindow('second'); closeWindow('third')">Back</button>
          </div>
 
          <div class="variable-window" id="fourth" style="display: none">
           <div class="curiosity-text">
            Plants can be affected by music. So, hey, don't be an egoist, share your buds with your plants, they like music too</div>
-           <button class="change-window" id="next" onclick="openWindow('fifth'); closeWindow('fourth')">Next</button>
-           <button class="change-window" id="back" onclick="openWindow('third'); closeWindow('fourth')">Back</button>
+           <button class="next" onclick="openWindow('fifth'); closeWindow('fourth')">Next</button>
+           <button class="back" onclick="openWindow('third'); closeWindow('fourth')">Back</button>
          </div>
 
          <div class="variable-window" id="fifth" style="display: none">
           <div class="curiosity-text">
            Your work table is more dirty than a public bathroom private. Eww,why aren't you going to clean it now?</div>
-           <button class="change-window" id="next" onclick="openWindow('sixth'); closeWindow('fifth')">Next</button>
-           <button class="change-window" id="back" onclick="openWindow('fourth'); closeWindow('fifth')">Back</button>
+           <button class="next" onclick="openWindow('sixth'); closeWindow('fifth')">Next</button>
+           <button class="back" onclick="openWindow('fourth'); closeWindow('fifth')">Back</button>
          </div>
 
          <div class="variable-window" id="sixth" style="display: none">
           <div class="curiosity-text">
             Crows can remember human faces for years. Some friends you see every day always forget your birthday, a crow remembers you only because you annoyed it once. If i were you, i would change them for crows</div>
-           <button class="change-window" id="next" onclick="openWindow('seventh'); closeWindow('sixth')">Next</button>
-           <button class="change-window" id="back" onclick="openWindow('fifth'); closeWindow('sixth')">Back</button>
+           <button class="next" onclick="openWindow('seventh'); closeWindow('sixth')">Next</button>
+           <button class="back" onclick="openWindow('fifth'); closeWindow('sixth')">Back</button>
          </div>
 
          <div class="variable-window" id="seventh" style="display: none">
           <div class="curiosity-text">
             Cows have best friends and can become estressed when separeted from them.Even cows are more sociable than some people I know </div>
-           <button class="change-window" id="next" onclick="openWindow('eighth'); closeWindow('seventh')">Next</button>
-           <button class="change-window" id="back" onclick="openWindow('sixth'); closeWindow('seventh')">Back</button>
+           <button class="next" onclick="openWindow('eighth'); closeWindow('seventh')">Next</button>
+           <button class="back" onclick="openWindow('sixth'); closeWindow('seventh')">Back</button>
          </div>
 
          <div class="variable-window" id="eighth" style="display: none">
           <div class="curiosity-text">
            Dogs can learn hundreds of words and can distinguish between human intructions. Your dog understands you, it just chooses not to listen sometimes. I think I have friends like this</div>
-           <button class="change-window" id="next" onclick="openWindow('ninth'); closeWindow('eighth')">Next</button>
-           <button class="change-window" id="back" onclick="openWindow('seventh'); closeWindow('eighth')">Back</button>
+           <button class="next" onclick="openWindow('ninth'); closeWindow('eighth')">Next</button>
+           <button class="back" onclick="openWindow('seventh'); closeWindow('eighth')">Back</button>
          </div>
 
          <div class="variable-window" id="ninth" style="display: none">
           <div class="curiosity-text">
            Butterflies taste with their feet. Imagine have to step in your food before deciding if it's good</div>
-           <button class="change-window" id="next" onclick="openWindow('tenth')" onclick="closeWindow('ninth')">Next</button>
-           <button class="change-window" id="back" onclick="openWindow('eighth')" onclick="closeWindow('ninth')">Back</button>
+           <button class="next" onclick="openWindow('tenth')" onclick="closeWindow('ninth')">Next</button>
+           <button class="back" onclick="openWindow('eighth')" onclick="closeWindow('ninth')">Back</button>
          </div>
 
 
          <div class="variable-window" id="tenth" style="display: none">
           <div class="curiosity-text">
             Some turtles can breath trought specialized tissues near their rear end. Evolution really said,"We need an inexpected solution", and nobody questioned it</div>
-           <button class="change-window" id="next" onclick="openWindow('first')" onclick="closeWindow('tenth')">Next</button>
-           <button class="change-window" id="back" onclick="openWindow('ninth')" onclick="closeWindow('tenth')">Back</button>
+           <button class="next" onclick="openWindow('first')" onclick="closeWindow('tenth')">Next</button>
+           <button class="back" onclick="openWindow('ninth')" onclick="closeWindow('tenth')">Back</button>
          </div>
         </div>
       </div>
@@ -234,7 +234,7 @@
         <div class="window-body">
           <div class="variable-window" id="gameIntroduction">
             Hi, this is a find the different emoji game, you have five seconds to find the emoji, when you choose the correct one, you pass to another fase, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
-            <button class="change-button" id="next" onclick="closeWindow('gameIntroduction')" onclick="openWindow('fase1')"></button>
+            <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('fase1')"></button>
           </div>
   
          <div class="game-window" id="fase1" style="display: none"></div>

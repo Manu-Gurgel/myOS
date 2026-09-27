@@ -233,7 +233,8 @@ border:none;
     border:none;
 }
 
-.change-button{
+
+.back{
     width:70px;
     height:20px;
     text-align: center;
@@ -241,18 +242,22 @@ border:none;
     background-color: rgba(250, 248, 248, 0.5);
     border-radius:20px;
     border:none;
-}
-
-#back{
     position: absolute;
     left: 10px;
     bottom: 10px;
 }
 
-#next{
-  position: absolute;
-  right: 10px;
-  bottom: 10px;   
+.next{
+    width:70px;
+    height:20px;
+    text-align: center;
+    font-size: 15px;
+    background-color: rgba(250, 248, 248, 0.5);
+    border-radius:20px;
+    border:none;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;   
 }
 
 
