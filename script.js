@@ -184,5 +184,4 @@ function Windowmovel(windowElement){
 
         window.open(`https://www.google.com/search?q=${encodeURIComponent(Searched.value)}`);
       }
-
     
