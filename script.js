@@ -206,6 +206,7 @@ function Windowmovel(windowElement){
         clearInterval(cronometro);
 
         tabuleiro.innerHTML="";
+        tabuleiro.style.display = "grid";
         tabuleiro.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
 
         let listEmoji = Array(quantidade-1).fill(normalEmoji);
