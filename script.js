@@ -15,7 +15,13 @@ updateclock();
 
 
 function openWindow(windowId){
-   document.getElementById(windowId).style.display = "block";
+  const element = document.getElementById(windowId);
+  if(element === 'tabuleiro'){
+    document.getElementById(windowId).style.display = "grid";
+  }
+  else{
+    document.getElementById(windowId).style.display = "block";
+  }
 }
 
 function closeWindow(windowId){
@@ -200,7 +206,6 @@ function Windowmovel(windowElement){
         clearInterval(cronometro);
 
         tabuleiro.innerHTML="";
-        tabuleiro.style.display = "grid";
         tabuleiro.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
 
         let listEmoji = Array(quantidade-1).fill(normalEmoji);
