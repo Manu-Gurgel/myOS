@@ -131,7 +131,7 @@ function Windowmovel(windowElement){
 
 
     let totalexpression = document.getElementById('screen');
-    const maxDigits = 12;
+    const maxDigits = 15;
 
     function expression(caractere){
       if(totalexpression.innerText.length>=maxDigits){
@@ -158,7 +158,7 @@ function Windowmovel(windowElement){
       try{
         let equation = totalexpression.innerText;
         equationLength = eval(equation);
-        if(equationLength.length>maxDigits){
+        if(String(equationLength).length>maxDigits){
           alert("The result has excess of digits, only 12 digts are visible")
         }
         
@@ -207,7 +207,7 @@ function Windowmovel(windowElement){
           const button = document.createElement('button');
           button.textContent = emoji;
           
-          button.addEventListener(click, () => {
+          button.addEventListener('click', () => {
             if(emoji === normalEmoji){
               closeWindow('tabuleiro');
               openWindow('wrongAnswer');
@@ -242,7 +242,7 @@ function Windowmovel(windowElement){
 
       
         if(faseAtual === 4){
-          start("❤️","🩷", 20, 5);
+          startFase("❤️","🩷", 20, 5);
         }
 
 
