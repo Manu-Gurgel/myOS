@@ -228,15 +228,19 @@
 
 
 
-      <div class="game-geral" id="window-dfgm">
-        <div class="game-title">Where's the different?</div>
+      <div class="window-geral" id="window-dfgm">
+        <div class="window-title">Where's the different?</div>
         <button class="close-button" onclick="closeWindow('window-dfgm')"></button>
 
 
         <div class="game-window" id="tabuleiro" style="display: none">
         </div>
 
-        <div class="game-body">
+        <div class="window-body">
+
+          <div class="game-window" id="tabuleiro" style="display: none">
+        </div>
+        
           <div class="variable-window" id="gameIntroduction">
             Hi, this is a find the different emoji game, you have five seconds to find the emoji, when you choose the correct one, you pass to another fase, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
             <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('tabuleiro'); proximaFase()">Next</button>
