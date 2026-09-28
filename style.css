@@ -306,12 +306,15 @@ font-size:15px;
 
 
 /*curiosities things*/
+.variable-text{
+    color:white;
+    margin: 30px 15px;
+    font-size: 17px;
+}
 .variable-window{
     width:100%;
     min-height:100px;
-    color:white;
     text-align: center;
-    font-size: 20px;
     padding: 15px 15px;
     display: flex;
     flex-direction: column;
