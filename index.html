@@ -187,14 +187,14 @@
 
          <div class="variable-window" id="sixth" style="display: none">
           <div class="curiosity-text">
-            Crows can remember human faces for years. Some friends you see every day always forget your birthday, a crow remembers you only because you annoyed it once. If i were you, i would change them for crows</div>
+            Crows can remember human faces for years. Some friends you see every day always forget your birthday, a crow remembers you because you annoyed it once. If i were you, i would change them for crows</div>
            <button class="next" onclick="openWindow('seventh'); closeWindow('sixth')">Next</button>
            <button class="back" onclick="openWindow('fifth'); closeWindow('sixth')">Back</button>
          </div>
 
          <div class="variable-window" id="seventh" style="display: none">
           <div class="curiosity-text">
-            Cows have best friends and can become estressed when separeted from them.Even cows are more sociable than some people I know </div>
+            Cows have best friends and can become estressed when separeted from them. Even cows are more sociable than some people I know </div>
            <button class="next" onclick="openWindow('eighth'); closeWindow('seventh')">Next</button>
            <button class="back" onclick="openWindow('sixth'); closeWindow('seventh')">Back</button>
          </div>
@@ -232,23 +232,23 @@
         <div class="window-title">Where's the different?</div>
         <button class="close-button" onclick="closeWindow('window-dfgm')"></button>
 
+        <div class="game-window" id="tabuleiro" style="display: none">
+         </div>
+
         <div class="window-body">
           <div class="variable-window" id="gameIntroduction">
             Hi, this is a find the different emoji game, you have five seconds to find the emoji, when you choose the correct one, you pass to another fase, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
-            <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('tabuleiro')">Next</button>
+            <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('tabuleiro'); proximaFase()">Next</button>
           </div>
-  
-         <div class="game-window" id="tabuleiro" style="display: none">
-          <script> startFase("🍎","🍏", 20, 5)</script>
-         </div>
 
          <div class="variable-window" id="wrongAnswer" style="display: none">
-          <button class="next" onclick="closeWindow('wrongAnswer'); openWindow('gameIntroduction')">Next</button>
+          Oops, you're wrong, try again
+          <button class="next" onclick="closeWindow('wrongAnswer'); openWindow('gameIntroduction')">Try againg</button>
          </div>
 
          <div class="variable-window" id="Win" style="display:none">
          Congratulatioooooooons, you won the game!!
-         <button class="restart" onclick="closeWindow('Win'); openWindow('gameIntroduction')">Restart</button>
+         <button class="next" onclick="closeWindow('Win'); openWindow('gameIntroduction')">Restart</button>
          </div>
         </div>
       </div>

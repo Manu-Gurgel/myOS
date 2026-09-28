@@ -231,75 +231,75 @@ function Windowmovel(windowElement){
         }
 
 
-         if(faseAtual === 2){
+         else if(faseAtual === 2){
           startFase("🏴","🏳️", 20, 5);
         }
 
 
-        if(faseAtual === 3){
+        else if(faseAtual === 3){
           startFase("😠","😡", 25, 5);
         }
 
       
-        if(faseAtual === 4){
+        else if(faseAtual === 4){
           startFase("❤️","🩷", 20, 5);
         }
 
 
-        if(faseAtual === 5){
+        else if(faseAtual === 5){
           startFase("📈","📉", 20, 5);
         }
 
-        if(faseAtual === 6){
+        else if(faseAtual === 6){
           startFase("🌜","🌛", 25, 5);
         }
 
-        if(faseAtual === 7){
+        else if(faseAtual === 7){
           startFase("⏳", "⌛", 25, 5);
         }
 
 
-        if(faseAtual === 8){
+        else if(faseAtual === 8){
           startFase("🌞", "☀️", 25, 5);
         }
 
-        if(faseAtual === 9){
+        else if(faseAtual === 9){
           startFase("🪺", "🪹", 30, 5);
         }
 
-        if(faseAtual === 10){
+        else if(faseAtual === 10){
           startFase("🐳", "🐋", 30, 5);
         }
 
-        if(faseAtual === 11){
+        else if(faseAtual === 11){
           startFase("☔", "☂️", 30, 5);
         }
 
-          if(faseAtual === 12){
+        else if(faseAtual === 12){
           startFase("😆", "😄", 30, 5);
         }
 
-        if(faseAtual === 13){
+        else if(faseAtual === 13){
           startFase("😍", "🤩", 35, 5);
         }
 
-        if(faseAtual === 14){
+        else if(faseAtual === 14){
           startFase("👄", "🫦", 35, 5);
         }
 
-        if(faseAtual === 15){
+        else if(faseAtual === 15){
           startFase("🎖️", "🏅", 35, 5);
         }
 
-        if(faseAtual === 16){
+        else if(faseAtual === 16){
           startFase("😾", "🐱", 35, 5);
         }
 
-        if(faseAtual === 17){
+        else if(faseAtual === 17){
           startFase("👿", "😈", 35, 5);
         }
 
-        if(faseAtual === 18){
+        else if(faseAtual === 18){
           closeWindow('tabuleiro');
           openWindow('Win');
         }
