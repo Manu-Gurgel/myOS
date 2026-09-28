@@ -197,6 +197,7 @@ function Windowmovel(windowElement){
       function startFase(normalEmoji, differentEmoji, quantidade, columns){
 
         tabuleiro.innerHTML="";
+        tabuleiro.style.display = "grid";
         tabuleiro.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
 
         let listEmoji = Array(quantidade-1).fill(normalEmoji);
@@ -206,7 +207,6 @@ function Windowmovel(windowElement){
         listEmoji.forEach(emoji => {
           const button = document.createElement('button');
           button.textContent = emoji;
-          button.style.border=`none`;
           
           button.addEventListener('click', () => {
             if(emoji === normalEmoji){
@@ -228,12 +228,12 @@ function Windowmovel(windowElement){
       function proximaFase(){
 
         if(faseAtual === 1){
-          startFase("🍎","🍏", 20, 5);
+          startFase("🍎","🍏", 25., 5);
         }
 
 
          else if(faseAtual === 2){
-          startFase("🏴","🏳️", 20, 5);
+          startFase("🏴","🏳️", 25, 5);
         }
 
 
@@ -243,61 +243,61 @@ function Windowmovel(windowElement){
 
       
         else if(faseAtual === 4){
-          startFase("❤️","🩷", 20, 5);
+          startFase("❤️","🩷", 25, 5);
         }
 
 
         else if(faseAtual === 5){
-          startFase("📈","📉", 20, 5);
+          startFase("📈","📉", 25, 5);
         }
 
         else if(faseAtual === 6){
-          startFase("🌜","🌛", 25, 5);
+          startFase("🌜","🌛", 30, 5);
         }
 
         else if(faseAtual === 7){
-          startFase("⏳", "⌛", 25, 5);
+          startFase("⏳", "⌛", 30, 5);
         }
 
 
         else if(faseAtual === 8){
-          startFase("🌞", "☀️", 25, 5);
+          startFase("🌞", "☀️", 30, 5);
         }
 
         else if(faseAtual === 9){
-          startFase("🪺", "🪹", 30, 5);
+          startFase("🪺", "🪹", 35, 5);
         }
 
         else if(faseAtual === 10){
-          startFase("🐳", "🐋", 30, 5);
+          startFase("🐳", "🐋", 35, 5);
         }
 
         else if(faseAtual === 11){
-          startFase("☔", "☂️", 30, 5);
+          startFase("☔", "☂️", 35, 5);
         }
 
         else if(faseAtual === 12){
-          startFase("😆", "😄", 30, 5);
+          startFase("😆", "😄", 35, 5);
         }
 
         else if(faseAtual === 13){
-          startFase("😍", "🤩", 35, 5);
+          startFase("😍", "🤩", 40, 5);
         }
 
         else if(faseAtual === 14){
-          startFase("👄", "🫦", 35, 5);
+          startFase("👄", "🫦", 40, 5);
         }
 
         else if(faseAtual === 15){
-          startFase("🎖️", "🏅", 35, 5);
+          startFase("🎖️", "🏅", 40, 5);
         }
 
         else if(faseAtual === 16){
-          startFase("😾", "🐱", 35, 5);
+          startFase("😾", "🐱", 45, 5);
         }
 
         else if(faseAtual === 17){
-          startFase("👿", "😈", 35, 5);
+          startFase("👿", "😈", 45, 5);
         }
 
         else if(faseAtual === 18){
