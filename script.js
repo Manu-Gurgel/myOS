@@ -206,6 +206,7 @@ function Windowmovel(windowElement){
         listEmoji.forEach(emoji => {
           const button = document.createElement('button');
           button.textContent = emoji;
+          button.style.border=`none`;
           
           button.addEventListener('click', () => {
             if(emoji === normalEmoji){

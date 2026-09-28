@@ -34,10 +34,10 @@ input, textarea, .textInput {
     height:45px;
     width:100%;
     font-size: 25px;
-    display: flex; /*permite organizar itens unidimensionalmente (linha ou coluna)*/
-    justify-content: space-between; /*faz os elementos internos irem pras bordas*/
+    display: flex; /*permite organizar itens unidimensionalmente (linha ou coluna), é necessario pro justify content e text align*/
+    justify-content: space-between; /*faz os elementos internos irem pras bordas, organiza os elementos horizontalmente (segue a direçao do flex)*/
     background-color: rgba(0, 0, 0, 0.6);
-    align-items: center; /*alinha os itens com o centro do todo horizontalmente*/
+    align-items: center; /*alinha os itens com o centro do todo verticalmente, pq a direçao do flex é horixontal (padrao= row - elemnetos linha -)*/
     color: rgb(250, 250, 250);
     padding: 5px 16px; /*adciona margem interna vertical e horizontal*/
     box-sizing: border-box;
@@ -49,8 +49,8 @@ input, textarea, .textInput {
 }
 .icone-geral{
     display: flex;
-    flex-direction: column; /* faz os itens se alinharem em coluna*/
-    justify-content:flex-start;
+    flex-direction: column; /* faz o eixo principal ser o vertical*/
+    justify-content:flex-start; /*alinha os itens no inicio do eixo principal(vertical, nesse caso)*/
     position: absolute; /*elemento pode ser colocado em qualquer lugar com coordenadas left e top*/
     transition: transform 0.4s ease, box-shadow transform 0.4s ease; /*cria uma animaçao para a mudança*/
     align-items: center; 
@@ -63,7 +63,7 @@ input, textarea, .textInput {
 .icone-img{
  border-radius: 20px;
  -webkit-user-drag:none; /*impede o arraste da imagem*/
- pointer-events: none; /*faz o click atravessar esse elemto e executar o que é do elemento atras dele*/
+ pointer-events: none; /*faz o click atravessar esse elemento e executar o que é do elemento atras dele*/
  flex-shrink: 0; /*impede ue o flex diminua a imagem*/
  display: block;
  height: 70px !important;
@@ -79,6 +79,7 @@ input, textarea, .textInput {
  font-size: 15px;
  font-weight: bold;/*deixa em negrito*/
  color: rgb(250, 250, 250);
+ display: flex;
  text-align: center;
  margin: 0 auto;/*define a margem dele para o exterior vertical e horizontal*/
 }
@@ -146,6 +147,8 @@ backdrop-filter:blur(8px); /*efeito do borrado*/
  background-color: rgba(66, 176, 188, 0.6);
  text-align: center;
  color: rgb(250, 250, 250);
+ display: flex;
+ justify-content: center;
  align-items: center;
  cursor: move; /*muda o cursor para o de movimento(4 setinhas)*/
  padding: 5px; /*nao aceita auto*/
@@ -236,7 +239,7 @@ border:none;
 
 .back{
     width:80px;
-    height:20px;
+    min-height:20px;
     text-align: center;
     font-size: 15px;
     background-color: rgba(250, 248, 248, 0.5);
@@ -249,7 +252,7 @@ border:none;
 
 .next{
     width:80px;
-    height:20px;
+    min-height:20px;
     text-align: center;
     font-size: 15px;
     background-color: rgba(250, 248, 248, 0.5);
@@ -322,5 +325,15 @@ font-size:15px;
     color:white;
     text-align: center;
     font-size: 20px;
-    padding: 25px 25px; 
+    padding: 15px 15px; 
+}
+
+.game-window button{
+    background-color:rgba(83, 191, 206, 0.6);
+    border:none;
+    font-size: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
