@@ -234,11 +234,20 @@
         <div class="window-body">
           <div class="variable-window" id="gameIntroduction">
             Hi, this is a find the different emoji game, you have five seconds to find the emoji, when you choose the correct one, you pass to another fase, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
-            <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('tabuleiro')"></button>
+            <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('tabuleiro')">Next</button>
           </div>
   
          <div class="game-window" id="tabuleiro" style="display: none">
           <script> startFase("🍎","🍏", 20, 5)</script>
+         </div>
+
+         <div class="variable-window" id="wrongAnswer" style="display: none">
+          <button class="next" onclick="closeWindow('wrongAnswer'); openWindow('gameIntroduction')">Next</button>
+         </div>
+
+         <div class="variable-window" id="Win" style="display:none">
+         Congratulatioooooooons, you won the game!!
+         <button class="restart" onclick="closeWindow('Win'); openWindow('gameIntroduction')">Restart</button>
          </div>
         </div>
       </div>
