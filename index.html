@@ -47,7 +47,7 @@
 
       <div class="icone-geral" id="curiosities" onclick="openWindow('window-crst')">
         <div class="icone-img"> <img src="pictures/curiosities.png" height="70" width="70"></div>
-        <div class="icone-text">Curiositys</div>
+        <div class="icone-text">Curiosities</div>
       </div>
 
 
@@ -232,7 +232,7 @@
         <div class="window-title">Where's the different?</div>
         <button class="close-button" onclick="closeWindow('window-dfgm')"></button>
 
-        
+
 
         <div class="window-body">
           <div class="game-window" id="tabuleiro" style="display: none">
@@ -252,6 +252,12 @@
          Congratulatioooooooons, you won the game!!
          <button class="next" onclick="closeWindow('Win'); openWindow('gameIntroduction')">Restart</button>
          </div>
+
+         <div class="variable-window" id="timeOut" style="display: none">
+          Oh no, the time is out!! try again
+          <button class="next" onclick="closeWindow('timeOut'); openWindow('gameIntroduction')">Try againg</button>
+         </div>
+
         </div>
       </div>
 

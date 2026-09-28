@@ -193,9 +193,11 @@ function Windowmovel(windowElement){
 
       const tabuleiro = document.getElementById('tabuleiro');
       let faseAtual = 1;
-      let tempoRestante = null;
+      let cronometro = null;
 
       function startFase(normalEmoji, differentEmoji, quantidade, columns){
+
+        clearInterval(cronometro);
 
         tabuleiro.innerHTML="";
         tabuleiro.style.display = "grid";
@@ -214,105 +216,162 @@ function Windowmovel(windowElement){
               closeWindow('tabuleiro');
               openWindow('wrongAnswer');
               faseAtual=1;
+              clearInterval(cronometro);
             }
 
             if(emoji === differentEmoji){
               faseAtual++;
               proximaFase();
+              clearInterval(cronometro);
             }
           });
           tabuleiro.appendChild(button);
         });
+
+          let tempoRestante = 5;
+
+          cronometro = setInterval(() => {
+            tempoRestante--;
+            if(tempoRestante<=0){
+              clearInterval(cronometro);
+              closeWindow('tabuleiro');
+              openWindow('timeOut');
+              faseAtual = 1;
+            }
+          }, 1000);
+
       }
 
 
       function proximaFase(){
 
         if(faseAtual === 1){
-          startFase("🍎","🍏", 30., 5);
+          startFase("🍎","🍏", 42, 6);
         }
 
 
          else if(faseAtual === 2){
-          startFase("🏴","🏳️", 30, 5);
+          startFase("🏴","🏳️", 42, 6);
         }
 
 
         else if(faseAtual === 3){
-          startFase("😠","😡", 30, 5);
+          startFase("😠","😡", 42, 6);
         }
 
       
         else if(faseAtual === 4){
-          startFase("❤️","🩷", 30, 5);
+          startFase("❤️","🩷", 42, 6);
         }
-
 
         else if(faseAtual === 5){
-          startFase("📈","📉", 30, 5);
+          startFase("🧑🏾","🧑🏽", 42, 6);
         }
+
 
         else if(faseAtual === 6){
-          startFase("🌜","🌛", 35, 5);
+          startFase("📈","📉", 42, 6);
         }
+
 
         else if(faseAtual === 7){
-          startFase("⏳", "⌛", 35, 5);
+          startFase("🔍","🔎", 48, 6);
         }
 
-
         else if(faseAtual === 8){
-          startFase("🌞", "☀️", 35, 5);
+          startFase("🌜","🌛", 48, 6);
         }
 
         else if(faseAtual === 9){
-          startFase("🪺", "🪹", 40, 5);
+          startFase("🤚", "✋", 48, 6);
         }
 
         else if(faseAtual === 10){
-          startFase("🐳", "🐋", 40, 5);
+          startFase("📥","📤", 48, 6);
         }
 
         else if(faseAtual === 11){
-          startFase("☔", "☂️", 40, 5);
+          startFase("⏳", "⌛", 48, 6);
         }
 
+
         else if(faseAtual === 12){
-          startFase("😆", "😄", 40, 5);
+          startFase("🌞", "☀️", 48, 6);
         }
 
         else if(faseAtual === 13){
-          startFase("😍", "🤩", 45, 5);
+          startFase("🪺", "🪹", 54, 6);
         }
 
         else if(faseAtual === 14){
-          startFase("👄", "🫦", 45, 5);
+          startFase("📸", "📷", 54, 6);
         }
 
-        else if(faseAtual === 15){
-          startFase("🏅", "🎖️", 45, 5);
+         else if(faseAtual === 15){
+          startFase("🔐", "🔒", 54, 6);
         }
 
         else if(faseAtual === 16){
-          startFase("🧑‍🦰", "👨‍🦰", 45, 5);
+          startFase("🐳", "🐋", 54, 6);
         }
 
         else if(faseAtual === 17){
-          startFase("🦻", "👂", 50, 5);
+          startFase("🐏", "🐑", 54, 6);
         }
 
         else if(faseAtual === 18){
-          startFase("😾", "🐱", 50, 5);
+          startFase("☔", "☂️", 54, 6);
         }
 
         else if(faseAtual === 19){
-          startFase("👿", "😈", 50, 5);
+          startFase("😆", "😄", 54, 6);
         }
 
         else if(faseAtual === 20){
+          startFase("😍", "🤩", 60, 6);
+        }
+
+        else if(faseAtual === 21){
+          startFase("🙂", "😐", 60, 6);
+        }
+
+        else if(faseAtual === 22){
+          startFase("👄", "🫦", 60, 6);
+        }
+
+        else if(faseAtual === 23){
+          startFase("🏅", "🎖️", 60, 6);
+        }
+
+        else if(faseAtual === 24){
+          startFase("🧟", "🧟‍♂️", 60, 6);
+        }
+
+        else if(faseAtual === 25){
+          startFase("🧑‍🦰", "👨‍🦰", 60, 6);
+        }
+
+        else if(faseAtual === 26){
+          startFase("🐪", "🐫", 66, 6);
+        }
+
+        else if(faseAtual === 27){
+          startFase("🦻", "👂", 66, 6);
+        }
+
+        else if(faseAtual === 28){
+          startFase("😾", "😼", 66, 6);
+        }
+
+        else if(faseAtual === 29){
+          startFase("👿", "😈", 66, 6);
+        }
+
+        else if(faseAtual === 30){
           closeWindow('tabuleiro');
           openWindow('Win');
           faseAtual=1;
+          clearInterval(cronometro);
         }
 
 
