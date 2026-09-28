@@ -156,7 +156,7 @@ backdrop-filter:blur(8px); /*efeito do borrado*/
 
 .window-body{
 background-color:rgba(83, 191, 206, 0.6);
-min-height:100px;
+min-height:40px;
 width:100%;
 font-size:20px;
 padding:8px 10px;
@@ -308,7 +308,7 @@ font-size:15px;
 /*curiosities things*/
 .variable-window{
     width:100%;
-    min-height:250px;
+    min-height:40px;
     color:white;
     text-align: center;
     font-size: 20px;
