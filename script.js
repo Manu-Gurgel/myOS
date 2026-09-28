@@ -213,16 +213,15 @@ function Windowmovel(windowElement){
           
           button.addEventListener('click', () => {
             if(emoji === normalEmoji){
-              closeWindow('tabuleiro');
-              openWindow('wrongAnswer');
               faseAtual=1;
               clearInterval(cronometro);
+              closeWindow('tabuleiro');
+              openWindow('wrongAnswer');
             }
 
             if(emoji === differentEmoji){
               faseAtual++;
               proximaFase();
-              clearInterval(cronometro);
             }
           });
           tabuleiro.appendChild(button);
@@ -343,31 +342,26 @@ function Windowmovel(windowElement){
           startFase("🏅", "🎖️", 60, 6);
         }
 
+
         else if(faseAtual === 24){
-          startFase("🧟", "🧟‍♂️", 60, 6);
-        }
-
-        else if(faseAtual === 25){
-          startFase("🧑‍🦰", "👨‍🦰", 60, 6);
-        }
-
-        else if(faseAtual === 26){
           startFase("🐪", "🐫", 66, 6);
         }
 
-        else if(faseAtual === 27){
+        else if(faseAtual === 25){
           startFase("🦻", "👂", 66, 6);
         }
 
-        else if(faseAtual === 28){
+        else if(faseAtual === 26){
           startFase("😾", "😼", 66, 6);
         }
 
-        else if(faseAtual === 29){
+        else if(faseAtual === 27){
           startFase("👿", "😈", 66, 6);
         }
 
-        else if(faseAtual === 30){
+        else if(faseAtual === 28){
+          faseAtual=1;
+          clearInterval(cronometro);
           closeWindow('tabuleiro');
           openWindow('Win');
           faseAtual=1;
