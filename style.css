@@ -308,7 +308,8 @@ font-size:15px;
 /*curiosities things*/
 .variable-text{
     color:white;
-    margin: 20px 15px;
+    margin-top:15px;
+    margin-botton:30px;
     font-size: 17px;
 }
 .variable-window{
@@ -333,7 +334,6 @@ font-size:15px;
     font-size: 20px;
     padding: 15px 15px; 
     gap:5px 5px;
-    background-color: rgba(83, 191, 206, 0.6);
 }
 
 .game-window button{
