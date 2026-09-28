@@ -16,7 +16,7 @@ updateclock();
 
 function openWindow(windowId){
   const element = document.getElementById(windowId);
-  if(element === 'tabuleiro'){
+  if(element.id === 'tabuleiro'){
     document.getElementById(windowId).style.display = "grid";
   }
   else{
@@ -197,7 +197,7 @@ function Windowmovel(windowElement){
 
 
 
-      const tabuleiro = document.getElementById('tabuleiro');
+      const tab = document.getElementById('tabuleiro');
       let faseAtual = 1;
       let cronometro = null;
 
@@ -205,9 +205,9 @@ function Windowmovel(windowElement){
 
         clearInterval(cronometro);
 
-        tabuleiro.innerHTML="";
-        tabuleiro.style.display = "grid";
-        tabuleiro.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+        tab.innerHTML="";
+        tab.style.display = `grid`;
+        tab.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
 
         let listEmoji = Array(quantidade-1).fill(normalEmoji);
         listEmoji.push(differentEmoji);
@@ -230,7 +230,7 @@ function Windowmovel(windowElement){
               proximaFase();
             }
           });
-          tabuleiro.appendChild(button);
+          tab.appendChild(button);
         });
 
           let tempoRestante = 5;
