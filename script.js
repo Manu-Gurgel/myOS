@@ -193,6 +193,7 @@ function Windowmovel(windowElement){
 
       const tabuleiro = document.getElementById('tabuleiro');
       let faseAtual = 1;
+      let tempoRestante = null;
 
       function startFase(normalEmoji, differentEmoji, quantidade, columns){
 
@@ -228,81 +229,90 @@ function Windowmovel(windowElement){
       function proximaFase(){
 
         if(faseAtual === 1){
-          startFase("🍎","🍏", 25., 5);
+          startFase("🍎","🍏", 30., 5);
         }
 
 
          else if(faseAtual === 2){
-          startFase("🏴","🏳️", 25, 5);
+          startFase("🏴","🏳️", 30, 5);
         }
 
 
         else if(faseAtual === 3){
-          startFase("😠","😡", 25, 5);
+          startFase("😠","😡", 30, 5);
         }
 
       
         else if(faseAtual === 4){
-          startFase("❤️","🩷", 25, 5);
+          startFase("❤️","🩷", 30, 5);
         }
 
 
         else if(faseAtual === 5){
-          startFase("📈","📉", 25, 5);
+          startFase("📈","📉", 30, 5);
         }
 
         else if(faseAtual === 6){
-          startFase("🌜","🌛", 30, 5);
+          startFase("🌜","🌛", 35, 5);
         }
 
         else if(faseAtual === 7){
-          startFase("⏳", "⌛", 30, 5);
+          startFase("⏳", "⌛", 35, 5);
         }
 
 
         else if(faseAtual === 8){
-          startFase("🌞", "☀️", 30, 5);
+          startFase("🌞", "☀️", 35, 5);
         }
 
         else if(faseAtual === 9){
-          startFase("🪺", "🪹", 35, 5);
+          startFase("🪺", "🪹", 40, 5);
         }
 
         else if(faseAtual === 10){
-          startFase("🐳", "🐋", 35, 5);
+          startFase("🐳", "🐋", 40, 5);
         }
 
         else if(faseAtual === 11){
-          startFase("☔", "☂️", 35, 5);
+          startFase("☔", "☂️", 40, 5);
         }
 
         else if(faseAtual === 12){
-          startFase("😆", "😄", 35, 5);
+          startFase("😆", "😄", 40, 5);
         }
 
         else if(faseAtual === 13){
-          startFase("😍", "🤩", 40, 5);
+          startFase("😍", "🤩", 45, 5);
         }
 
         else if(faseAtual === 14){
-          startFase("👄", "🫦", 40, 5);
+          startFase("👄", "🫦", 45, 5);
         }
 
         else if(faseAtual === 15){
-          startFase("🎖️", "🏅", 40, 5);
+          startFase("🏅", "🎖️", 45, 5);
         }
 
         else if(faseAtual === 16){
-          startFase("😾", "🐱", 45, 5);
+          startFase("🧑‍🦰", "👨‍🦰", 45, 5);
         }
 
         else if(faseAtual === 17){
-          startFase("👿", "😈", 45, 5);
+          startFase("🦻", "👂", 50, 5);
         }
 
         else if(faseAtual === 18){
+          startFase("😾", "🐱", 50, 5);
+        }
+
+        else if(faseAtual === 19){
+          startFase("👿", "😈", 50, 5);
+        }
+
+        else if(faseAtual === 20){
           closeWindow('tabuleiro');
           openWindow('Win');
+          faseAtual=1;
         }
 
 
