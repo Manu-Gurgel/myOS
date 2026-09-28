@@ -369,6 +369,7 @@ display: flex;
     font-size: 20px;
     padding: 15px 15px; 
     gap:8px 8px;
+    background-color: (83, 191, 206, 0.6);
 }
 
 .game-window button{
@@ -380,4 +381,5 @@ display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    aspect-ratio: 1 / 1;
 }
