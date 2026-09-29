@@ -233,7 +233,7 @@ function Windowmovel(windowElement){
           tab.appendChild(button);
         });
 
-          let tempoRestante = 5;
+          let tempoRestante = 7;
 
           cronometro = setInterval(() => {
             tempoRestante--;
