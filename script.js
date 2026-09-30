@@ -98,7 +98,7 @@ function Windowmovel(windowElement){
       return;
     }
   
-    Searched = inputElement.value.trim();
+    let Searched = inputElement.value.trim();
     const name = document.getElementById('city-name');
     const temp = document.getElementById('city-weather');
 
@@ -398,18 +398,15 @@ function Windowmovel(windowElement){
         let quant = 0;
 
         function memoryGame(){
-           document.getElementById('first-record').innerText = "level 1:";
-           document.getElementById('second-record').innerText = "level 2:";
-           document.getElementById('third-record').innerText = "level 3:";
-           
-          Fase();
+
+          Fases();
           timer();
 
           Mtab.style.display = `grid`;
-          Mtab.style.gridTemplantColumns = `repeat(${6}, 1fr)`;
+          Mtab.style.gridTemplateColumns = `repeat(6, 1fr)`;
 
           memoryCards = memoryElements.flatMap( element => [element, element]);
-          buttonCards = Array(quant).fill('❔');
+          const buttonCards = Array(quant).fill('❔');
           Mtab.innerText = "";
 
           let firstcard = null;
@@ -419,7 +416,7 @@ function Windowmovel(windowElement){
           let secondindice = null;
           
           buttonCards.forEach( (Card, indice) => {
-            button = document.createElement('button');
+            const button = document.createElement('button');
             button.textContent = Card;
             Mtab.appendChild(button);
 
@@ -442,21 +439,21 @@ function Windowmovel(windowElement){
               firstcard.textContent = '✅';
               secondcard.textContent = '✅';
 
-              firstcard.disblade = true;
-              secondcard.disblade = true;
+              firstcard.disabled = true;
+              secondcard.disabled = true;
 
               pairCounter++;
+
+              if(pairCounter===quant/2){
+                memoryFase++;
+                memoryGame();
+              }
 
               firstindice = null;
               secondindice = null;
               firstcard = null;
               secondcard= null;
               }, 500);
-
-              if(pairCounter===quant/2){
-                memoryFase++;
-                Fase();
-              }
             }
 
             else{
@@ -479,10 +476,13 @@ function Windowmovel(windowElement){
           });
         }
 
-        const leveltime;
+        let leveltime;
 
         function Fases(){
           if(memoryFase === 1){
+            document.getElementById('first-record').innerText = "level 1:";
+            document.getElementById('second-record').innerText = "level 2:";
+            document.getElementById('third-record').innerText = "level 3:";
              memoryElements = ['❤️', '🩷', '🧡','💛','💚','💙','🩵','💜','🤍'];
              quant = 18;
           }
@@ -506,6 +506,7 @@ function Windowmovel(windowElement){
             memoryFase = 1;
             leveltime = document.getElementById('third-record');
             leveltime.innerText += temp;
+            clearInterval(cronometro2);
             closeWindow('Memorytab');
             openWindow('Win');
           }
