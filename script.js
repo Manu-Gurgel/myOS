@@ -49,8 +49,8 @@ function Windowmovel(windowElement){
       const point = getPoint(e);
       let newX = point.clientX - offsetX;
       let newY = point.clientY - offsetY;
-      let maxX = window.innerWidth - windowElement.offsetWidth;
-      let maxY = window.innerHeight - windowElement.offsetHeight;
+      const maxX = document.documentElement.clientWidth - windowElement.offsetWidth;
+      const maxY = document.documentElement.clientHeight - windowElement.offsetHeight;
 
       if(newX > maxX) newX = maxX;
       if(newY > maxY) newY = maxY;
@@ -490,21 +490,21 @@ function Windowmovel(windowElement){
             document.getElementById('first-record').innerText = "level 1:";
             document.getElementById('second-record').innerText = "level 2:";
             document.getElementById('third-record').innerText = "level 3:";
-             memoryElements = ['❤️', '🩷', '🧡','💛','💚','💙','🩵','💜','🤍'];
-             quant = 18;
+             memoryElements = ['❤️', '🩷','💛','💚','🩵','💜'];
+             quant = 12;
           }
 
           else if(memoryFase === 2){
-            memoryElements = ['🍉','🍎','🍇','🍍','🍒','🍓','🥑','🍌','🥥','🍑','🫐','🍋‍🟩'];
-            quant = 24;
+            memoryElements = ['🍉','🍎','🍇','🍍','🍒','🍓','🥑','🍌','🥥'];
+            quant = 18;
             leveltime = document.getElementById('first-record');
             leveltime.innerText+=temp;
 
           }
 
           else if(memoryFase === 3){
-            memoryElements = ['😎','😴','🙄','😭','🤑','🤯','🥸','🤡','🙃','🤪','😱','🥳','🤠', '🥰','😇'];
-            quant = 30;
+            memoryElements = ['😎','😴','🙄','😭','🤑','🤯','🥸','🤡','🙃','🤪','😱','🤠'];
+            quant = 24;
             leveltime = document.getElementById('second-record');
             leveltime.innerText += temp;
           }
