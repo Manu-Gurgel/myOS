@@ -453,7 +453,6 @@ function Windowmovel(windowElement){
               pairCounter++;
 
               if(pairCounter===quant/2){
-                memoryFase++;
                 memoryGame();
               }
 
@@ -493,6 +492,7 @@ function Windowmovel(windowElement){
             document.getElementById('third-record').innerText = "level 3:";
              memoryElements = ['❤️', '🩷','💛','💚','🩵','💜'];
              quant = 12;
+             memoryFase++;
           }
 
           else if(memoryFase === 2){
@@ -500,6 +500,7 @@ function Windowmovel(windowElement){
             quant = 18;
             leveltime = document.getElementById('first-record');
             leveltime.innerText+=temp;
+            memoryFase++;
 
           }
 
@@ -508,6 +509,7 @@ function Windowmovel(windowElement){
             quant = 24;
             leveltime = document.getElementById('second-record');
             leveltime.innerText += temp;
+            memoryFase++;
           }
 
           else if(memoryFase === 4){
