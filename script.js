@@ -398,7 +398,10 @@ function Windowmovel(windowElement){
         let quant = 0;
 
         function memoryGame(){
-
+           document.getElementById('first-record').innerText = "level 1:";
+           document.getElementById('second-record').innerText = "level 2:";
+           document.getElementById('third-record').innerText = "level 3:";
+           
           Fase();
           timer();
 

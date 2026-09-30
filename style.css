@@ -122,6 +122,12 @@ top:295px;
 z-index: 10;
 }
 
+#memoryGame{
+left:20px;
+top:400px;
+z-index: 10;
+}
+
 
 
 
@@ -193,6 +199,10 @@ align-items: center;
 }
 
 #window-dfgm{
+    display: none;
+}
+
+#window-mgame{
     display: none;
 }
 
