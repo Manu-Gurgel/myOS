@@ -413,6 +413,7 @@ function Windowmovel(windowElement){
           Mtab.style.gridTemplateColumns = `repeat(6, 1fr)`;
 
           memoryCards = memoryElements.flatMap( element => [element, element]);
+          memoryCards.sort(() => Math.random() - 0.5);
           const buttonCards = Array(quant).fill('❔');
           Mtab.innerText = "";
 
@@ -510,12 +511,12 @@ function Windowmovel(windowElement){
           }
 
           else if(memoryFase === 4){
-            memoryFase = 1;
             leveltime = document.getElementById('third-record');
             leveltime.innerText += temp;
             clearInterval(cronometro2);
             closeWindow('Memorytab');
             openWindow('Win');
+            memoryFase=1;
           }
         }
 
