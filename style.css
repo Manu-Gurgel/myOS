@@ -122,7 +122,7 @@ top:295px;
 z-index: 10;
 }
 
-#memoryGame{
+#MemoryGame{
 left:20px;
 top:400px;
 z-index: 10;
@@ -346,6 +346,8 @@ font-size:15px;
     gap:5px 5px;
     box-sizing: border-box;
 }
+
+
 
 .game-window button{
     background-color:rgba(83, 191, 206, 0.6);

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html> 
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>LakeOS</title>
-      <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LakeOS</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body> 
@@ -61,7 +61,7 @@
 
 
       <div class="icone-geral" id="MemoryGame" onclick="openWindow('window-mgame')">
-       <div class="icone-img"><img src="pictures/memorygame.png" height="70" width="70"></div>
+       <div class="icone-img"><img src="pictures/Memorygame.png" height="70" width="70"></div>
        <div class="icone-text">Memory</div>
         <div class="icone-text">Game</div>
       </div>
@@ -146,11 +146,11 @@
         <button class="close-button" onclick="closeWindow('window-srch')"></button>
 
         <div class="window-body">
-         <textarea class="textInput" id="search-text" placeholder="Do your search"></textarea>
-         <button class="enter-button" onclick="ExecuteSearch('search-text')">Search</button>
+          <textarea class="textInput" id="search-text" placeholder="Do your search"></textarea>
+          <button class="enter-button" onclick="ExecuteSearch('search-text')">Search</button>
         </div>
       </div>
-
+        
 
 
 
@@ -243,15 +243,14 @@
         <button class="close-button" onclick="closeWindow('window-dfgm')"></button>
 
         <div class="window-body">
-          <div class="game-window" id="tabuleiro" style="display: none">
-        </div>
+          <div class="game-window" id="tabuleiro" style="display: none"></div>
 
           <div class="variable-window" id="gameIntroduction">
             <div class="variable-text">
             Hi, this is a find the different emoji game, you have ten seconds (I tried with only five seconds, but failed) to find the emoji, when you choose the correct one, you pass to another level, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
             </div>
             <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('tabuleiro'); proximaFase()">Next</button>
-          </div>
+         </div>
 
          <div class="variable-window" id="wrongAnswer" style="display: none">
            <div class="variable-text">
@@ -274,6 +273,7 @@
           <button class="next" onclick="closeWindow('timeOut'); openWindow('gameIntroduction')">Try again</button>
          </div>
 
+         
         </div>
       </div>
 
@@ -329,3 +329,13 @@
 
 
 </html>
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
+
+>>>>>>> f7b8b15e30142666e31906bcdab2074ae74acee8

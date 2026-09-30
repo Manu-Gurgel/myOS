@@ -49,6 +49,11 @@ function Windowmovel(windowElement){
       const point = getPoint(e);
       let newX = point.clientX - offsetX;
       let newY = point.clientY - offsetY;
+      let maxX = window.innerWidth - windowElement.offsetWidth;
+      let maxY = window.innerHeight - windowElement.offsetHeight;
+
+      if(newX > maxX) newX = maxX;
+      if(newY > maxY) newY = maxY;
 
       if(newX < 0) newX=0;
       if(newY < 0) newY=0;
@@ -191,6 +196,8 @@ function Windowmovel(windowElement){
 
         window.open(`https://www.google.com/search?q=${encodeURIComponent(Searched.value)}`);
       }
+
+
 
 
       
@@ -511,10 +518,5 @@ function Windowmovel(windowElement){
             openWindow('Win');
           }
         }
-
-
-        memoryGame();
-
-
 
     
