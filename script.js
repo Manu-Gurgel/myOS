@@ -16,7 +16,7 @@ updateclock();
 
 function openWindow(windowId){
   const element = document.getElementById(windowId);
-  if(element.id === 'tabuleiro'){
+  if(element.id === 'tabuleiro' || element.id === 'Memorytab' ){
     document.getElementById(windowId).style.display = "grid";
   }
   else{
@@ -373,10 +373,143 @@ function Windowmovel(windowElement){
           faseAtual=1;
           clearInterval(cronometro);
         }
+      }
 
 
+
+      let cronometro2 = null;
+      let temp = 0;
+
+      function timer(){
+        temp = 0;
+        clearInterval(cronometro2);
+
+        cronometro2 = setInterval(() =>{
+          temp++;
+        }, 1000);
+
+      }
+
+
+        let memoryFase = 1;
+        const Mtab = document.getElementById('Memorytab');
+        let memoryElements = Array();
+        let memoryCards = Array();
+        let quant = 0;
+
+        function memoryGame(){
+
+          Fase();
+          timer();
+
+          Mtab.style.display = `grid`;
+          Mtab.style.gridTemplantColumns = `repeat(${6}, 1fr)`;
+
+          memoryCards = memoryElements.flatMap( element => [element, element]);
+          buttonCards = Array(quant).fill('❔');
+          Mtab.innerText = "";
+
+          let firstcard = null;
+          let secondcard = null;
+          let pairCounter = 0;
+          let firstindice = null;
+          let secondindice = null;
+          
+          buttonCards.forEach( (Card, indice) => {
+            button = document.createElement('button');
+            button.textContent = Card;
+            Mtab.appendChild(button);
+
+            button.addEventListener('click', () => {
+            
+            if(!firstcard){
+              firstcard=button;
+              button.textContent = memoryCards[indice];
+              firstindice = indice;
+            }
+
+            else if(!secondcard && indice!=firstindice){
+              secondcard = button;
+              button.textContent = memoryCards[indice];
+              secondindice = indice;
+
+              if(memoryCards[firstindice] === memoryCards[secondindice]){
+
+              setTimeout(() => {
+              firstcard.textContent = '✅';
+              secondcard.textContent = '✅';
+
+              firstcard.disblade = true;
+              secondcard.disblade = true;
+
+              pairCounter++;
+
+              firstindice = null;
+              secondindice = null;
+              firstcard = null;
+              secondcard= null;
+              }, 500);
+
+              if(pairCounter===quant/2){
+                memoryFase++;
+                Fase();
+              }
+            }
+
+            else{
+
+              setTimeout(() =>{
+                firstcard.textContent = '❔'
+                secondcard.textContent='❔';
+                firstindice = null;
+                secondindice = null;
+                firstcard = null;
+                secondcard= null;
+              }, 1000)
+            }
+          }
+
+          else{
+              return;
+          }
+            });
+          });
         }
 
+        const leveltime;
+
+        function Fases(){
+          if(memoryFase === 1){
+             memoryElements = ['❤️', '🩷', '🧡','💛','💚','💙','🩵','💜','🤍'];
+             quant = 18;
+          }
+
+          else if(memoryFase === 2){
+            memoryElements = ['🍉','🍎','🍇','🍍','🍒','🍓','🥑','🍌','🥥','🍑','🫐','🍋‍🟩'];
+            quant = 24;
+            leveltime = document.getElementById('first-record');
+            leveltime.innerText+=temp;
+
+          }
+
+          else if(memoryFase === 3){
+            memoryElements = ['😎','😴','🙄','😭','🤑','🤯','🥸','🤡','🙃','🤪','😱','🥳','🤠', '🥰','😇'];
+            quant = 30;
+            leveltime = document.getElementById('second-record');
+            leveltime.innerText += temp;
+          }
+
+          else if(memoryFase === 4){
+            memoryFase = 1;
+            leveltime = document.getElementById('third-record');
+            leveltime.innerText += temp;
+            closeWindow('Memorytab');
+            openWindow('Win');
+          }
+        }
+
+
+        memoryGame();
 
 
 

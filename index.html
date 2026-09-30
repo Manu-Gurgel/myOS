@@ -60,6 +60,14 @@
 
 
 
+      <div class="icone-geral" id="MemoryGame" onclick="openWindow('window-mgame')">
+       <div class="icone-img"><img src="pictures/memorygame.png" height="70" width="70"></div>
+       <div class="icone-text">Memory</div>
+        <div class="icone-text">Game</div>
+      </div>
+
+
+
 
 
 
@@ -240,7 +248,7 @@
 
           <div class="variable-window" id="gameIntroduction">
             <div class="variable-text">
-            Hi, this is a find the different emoji game, you have ten seconds (I tried with only five seconds, but failed) to find the emoji, when you choose the correct one, you pass to another fase, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
+            Hi, this is a find the different emoji game, you have ten seconds (I tried with only five seconds, but failed) to find the emoji, when you choose the correct one, you pass to another level, if you choose the wrong one or don't find the correct one, the game restart. Good luck!!!
             </div>
             <button class="next" onclick="closeWindow('gameIntroduction'); openWindow('tabuleiro'); proximaFase()">Next</button>
           </div>
@@ -264,6 +272,48 @@
             Oh no, the time is out!! try again
           </div>
           <button class="next" onclick="closeWindow('timeOut'); openWindow('gameIntroduction')">Try again</button>
+         </div>
+
+        </div>
+      </div>
+
+
+      <div class="window-geral" id="window-mgame">
+        <div class="window-title">Make pairs</div>
+        <button class="close-button" onclick="closeWindow('window-mgame')"></button>
+
+        <div class="window-body">
+          <div class="game-window" id="Memorytab" style="display: none">
+        </div>
+
+          <div class="variable-window" id="MgameIntroduction">
+            <div class="variable-text">
+            Hi, this is a memory game, you can play three levels, when you cloplete all them, you can see your time record at each one and play it again to do them even fast!!!
+            </div>
+            <button class="next" onclick="closeWindow('MgameIntroduction'); openWindow('Memorytab'); proximaFase()">Next</button>
+          </div>
+
+         <div class="variable-window" id="Win" style="display:none">
+           <div class="variable-text">
+         Congratulatioooooooons, you won the game!!
+           </div>
+         <button class="next" onclick="closeWindow('Win'); openWindow('records')">Records</button>
+         </div>
+
+         <div class="variable-window" id="records" style="display: none">
+          <div class="variable-text" id="first-record">
+            Level 1:
+          </div>
+
+          <div class="variable-text" id="second-record">
+            Level 2:
+          </div>
+
+          <div class="variable-text" id="third-record">
+            Level 3:
+          </div>
+
+          <button class="next" onclick="closeWindow('records'); openWindow('MgameIntroduction')">Play again</button>
          </div>
 
         </div>
