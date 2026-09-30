@@ -344,6 +344,7 @@ font-size:15px;
     font-size: 20px;
     padding: 15px 15px; 
     gap:5px 5px;
+    box-sizing: border-box;
 }
 
 .game-window button{
