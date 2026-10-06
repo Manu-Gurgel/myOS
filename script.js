@@ -12,8 +12,6 @@ updateclock();
 
 
 
-
-
 function openWindow(windowId){
   const element = document.getElementById(windowId);
   if(element.id === 'tabuleiro' || element.id === 'Memorytab' ){
@@ -515,10 +513,10 @@ function Windowmovel(windowElement){
           else if(memoryFase === 4){
             leveltime = document.getElementById('third-record');
             leveltime.innerText += temp;
+            memoryFase = 1;
             clearInterval(cronometro2);
             closeWindow('Memorytab');
-            openWindow('Win');
-            memoryFase=1;
+            openWindow('Won');
           }
         }
 
